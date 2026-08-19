@@ -1420,3 +1420,12 @@ video {
     .modal-project-navigation { margin-top: 30px; }.modal-project-navigation-icon { display: none; }.modal-project-navigation button { font-size: 11px; gap: 8px; }
     .modal-cta { align-items: flex-start; flex-wrap: wrap; padding: 22px; }.modal-cta > i { font-size: 30px; }.modal-cta h3 { font-size: 19px; }.modal-cta .budget-btn { width: 100%; margin: 8px 0 0; text-align: center; }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

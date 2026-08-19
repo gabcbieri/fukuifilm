@@ -1,58 +1,58 @@
-import { file } from "bun";
+﻿import { file } from "bun";
+import { extname, resolve, sep } from "node:path";
+
+const publicRoot = resolve(".");
+const port = Number(Bun.env.PORT ?? 3000);
+const production = Bun.env.NODE_ENV === "production";
+const longCacheExtensions = new Set([
+  ".png", ".jpg", ".jpeg", ".webp", ".avif", ".svg", ".gif", ".ico",
+  ".woff", ".woff2",
+]);
 
 Bun.serve({
-  port: 3000,
+  port,
 
   async fetch(req) {
     const url = new URL(req.url);
+    let pathname: string;
 
-    let pathname = decodeURIComponent(url.pathname);
-
-    // Página inicial
-    if (pathname === "/") {
-      pathname = "/index.html";
+    try {
+      pathname = decodeURIComponent(url.pathname);
+    } catch {
+      return new Response("400 - Requisição inválida", { status: 400 });
     }
 
-    const arquivo = file("." + pathname);
+    if (pathname === "/") pathname = "/index.html";
 
+    const requestedPath = resolve(publicRoot, `.${pathname}`);
+    if (requestedPath !== publicRoot && !requestedPath.startsWith(publicRoot + sep)) {
+      return new Response("403 - Acesso negado", { status: 403 });
+    }
+
+    const arquivo = file(requestedPath);
     if (!(await arquivo.exists())) {
-      return new Response("404 - Página não encontrada", {
-        status: 404,
-      });
+      return new Response("404 - Página não encontrada", { status: 404 });
     }
 
     const headers = new Headers();
+    const extension = extname(pathname).toLowerCase();
 
-    // Cache inteligente
-    if (
-      pathname.endsWith(".png") ||
-      pathname.endsWith(".jpg") ||
-      pathname.endsWith(".jpeg") ||
-      pathname.endsWith(".webp") ||
-      pathname.endsWith(".avif") ||
-      pathname.endsWith(".svg") ||
-      pathname.endsWith(".gif") ||
-      pathname.endsWith(".ico") ||
-      pathname.endsWith(".css") ||
-      pathname.endsWith(".js") ||
-      pathname.endsWith(".woff") ||
-      pathname.endsWith(".woff2")
-    ) {
-      // 1 ano
+    if (longCacheExtensions.has(extension)) {
       headers.set("Cache-Control", "public, max-age=31536000, immutable");
+    } else if (extension === ".css" || extension === ".js") {
+      headers.set("Cache-Control", "public, max-age=3600, must-revalidate");
     } else {
-      // HTML
       headers.set("Cache-Control", "no-cache");
     }
 
     headers.set("X-Content-Type-Options", "nosniff");
+    headers.set("Referrer-Policy", "strict-origin-when-cross-origin");
+    headers.set("X-Frame-Options", "SAMEORIGIN");
 
-    return new Response(arquivo, {
-      headers,
-    });
+    return new Response(arquivo, { headers });
   },
 
-  development: true,
+  development: !production,
 });
 
-console.log("🚀 Fukuifilm rodando em http://localhost:3000");
+console.log(`🚀 Fukuifilm rodando em http://localhost:${port}`);

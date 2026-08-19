@@ -1,15 +1,23 @@
-# fukuifilm
+﻿# FUKUIFILM
 
-To install dependencies:
+Site institucional e portfólio da FUKUIFILM, construído com HTML, CSS, JavaScript e um servidor estático em Bun.
+
+## Desenvolvimento
 
 ```bash
 bun install
+bun run dev
 ```
 
-To run:
+Acesse `http://localhost:3000`.
+
+## Verificações
 
 ```bash
-bun run index.ts
+bun run typecheck
+bun run optimize:images
 ```
 
-This project was created using `bun init` in bun v1.3.14. [Bun](https://bun.com) is a fast all-in-one JavaScript runtime.
+## Restaurar a versão anterior
+
+O estado anterior às otimizações está no commit `da8c146`. Para visualizá-lo sem alterar o histórico, use `git switch --detach da8c146`. Para desfazer o commit final das melhorias, use `git revert <commit>`.

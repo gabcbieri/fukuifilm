@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
@@ -6,13 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FUKUIFILM | Projetos</title>
   <meta name="description"
-    content="fukuifilm é uma agência de marketing e direção visual focada em presença de marca, publicidade, filmes e portfólio autoral." />
+    content="fukuifilm Ã© uma agÃªncia de marketing e direÃ§Ã£o visual focada em presenÃ§a de marca, publicidade, filmes e portfÃ³lio autoral." />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#0b0b0b" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="fukuifilm" />
   <meta property="og:description"
-    content="Marketing, publicidade e direção visual com presença, memória e sofisticação." />
+    content="Marketing, publicidade e direÃ§Ã£o visual com presenÃ§a, memÃ³ria e sofisticaÃ§Ã£o." />
   <meta property="og:locale" content="pt_BR" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,14 +20,6 @@
     rel="stylesheet" />
   <!-- LOGO -->
   <link rel="preload" href="img/FUKUIFILM-HORIZONTAL-BRANCO.webp" as="image">
-  <!-- PROJETOS -->
-  <link rel="preload" href="img/foto1tortinha.webp" as="image">
-  <link rel="preload" as="image" href="img/fabricademontros.webp">
-  <link rel="preload" href="img/foto3.webp" as="image">
-  <link rel="preload" href="img/foto4.webp" as="image">
-  <!-- FILMES -->
-  <link rel="preload" href="img/cadafalsohorizontal.webp" as="image">
-  <link rel="preload" href="img/etrehorizontal.webp" as="image">
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="responsive.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
@@ -41,12 +33,12 @@
 
       <!-- LOGO ESQUERDA -->
       <a href="index.html" class="menu-brand">
-        <img src="img/FUKUIFILM-HORIZONTAL-BRANCO.webp" alt="FUKUIFILM" class="menu-logo" loading="eager">
+        <img src="img/FUKUIFILM-HORIZONTAL-BRANCO.webp" alt="FUKUIFILM" class="menu-logo" loading="eager" fetchpriority="high">
       </a>
 
       <!-- MENU CENTRO -->
       <ul id="main-navigation">
-        <li><a href="index.html">Início</a></li>
+        <li><a href="index.html">InÃ­cio</a></li>
         <li><a href="#projects-section">Projetos</a></li>
         <li><a href="#films-section">Em foco</a></li>
       </ul>
@@ -54,15 +46,15 @@
       <!-- DIREITA -->
       <div class="menu-right">
 
-        <a href="https://www.instagram.com/fukuifilm/" target="_blank" class="menu-instagram">
+        <a href="https://www.instagram.com/fukuifilm/" target="_blank" rel="noopener noreferrer" class="menu-instagram">
           <i class="fab fa-instagram"></i>
         </a>
 
-        <a class="budget-btn" href="https://wa.me/5547999988082" target="_blank">
-          Solicitar orçamento
+        <a class="budget-btn" href="https://wa.me/5547999988082" target="_blank" rel="noopener noreferrer">
+          Solicitar orÃ§amento
         </a>
 
-        <!-- HAMBURGUER — visível apenas em mobile/tablet via CSS -->
+        <!-- HAMBURGUER â€” visÃ­vel apenas em mobile/tablet via CSS -->
         <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false"
           aria-controls="main-navigation">
           <i class="fas fa-bars"></i>
@@ -109,23 +101,23 @@
           <div class="project-photo-grid">
             <figure class="project-photo project-photo-wide">
               <img id="project-image-wide" src="img/growthlogo.webp" alt="Retratos Corporativos | Growth"
-                loading="eager">
+                loading="lazy">
             </figure>
 
             <figure class="project-photo project-photo-tall">
               <img id="project-image-tall" src="img/growthlogo.webp" alt="Retratos Corporativos | Growth"
-                loading="eager">
+                loading="lazy">
             </figure>
 
             <figure class="project-photo project-photo-square">
               <img id="project-image-square" src="img/growthlogo.webp" alt="Retratos Corporativos | Growth"
-                loading="eager">
+                loading="lazy">
             </figure>
           </div>
 
         </div>
 
-        <button class="project-nav project-nav-next" type="button" aria-label="Próximo projeto">
+        <button class="project-nav project-nav-next" type="button" aria-label="PrÃ³ximo projeto">
           <i class="fas fa-chevron-right"></i>
         </button>
 
@@ -137,64 +129,64 @@
 
           <button class="project-card" data-project="1">
             <span class="project-name">Retratos Corporativos | Growth</span>
-            <img src="img/growthlogo.webp" alt="Projeto 1" loading="eager">
+            <img src="img/growthlogo.webp" alt="Projeto 1" loading="lazy">
           </button>
 
           <button class="project-card" data-project="2">
-            <span class="project-name">Lançamento de Produto | Ozoncare</span>
-            <img src="img/ozoncare4.webp" alt="Projeto 2" loading="eager">
+            <span class="project-name">LanÃ§amento de Produto | Ozoncare</span>
+            <img src="img/ozoncare4.webp" alt="Projeto 2" loading="lazy">
           </button>
 
           <button class="project-card" data-project="3">
-            <span class="project-name">Fotografia de Cardápio | Seu Conde</span>
-            <img src="img/foto4.webp" alt="Projeto 3" loading="eager">
+            <span class="project-name">Fotografia de CardÃ¡pio | Seu Conde</span>
+            <img src="img/foto4.webp" alt="Projeto 3" loading="lazy">
           </button>
 
           <button class="project-card" data-project="4">
             <span class="project-name">Delas Summit | Sebrae</span>
-            <img src="img/delassummitpreenchimento.webp" alt="Projeto 4" loading="eager">
+            <img src="img/delassummitpreenchimento.webp" alt="Projeto 4" loading="lazy">
           </button>
 
           <button class="project-card" data-project="5">
-            <span class="project-name">Produção de Conteúdo | Casa Inti Café</span>
-            <img src="img/foto1tortinha.webp" alt="Projeto 5" loading="eager">
+            <span class="project-name">ProduÃ§Ã£o de ConteÃºdo | Casa Inti CafÃ©</span>
+            <img src="img/foto1tortinha.webp" alt="Projeto 5" loading="lazy">
           </button>
 
 
           <button class="project-card" data-project="6">
-            <span class="project-name">Léo Stronda | Fábrica de Monstros</span>
-            <img src="img/fabricademontros.webp" alt="Projeto 6" loading="eager">
+            <span class="project-name">LÃ©o Stronda | FÃ¡brica de Monstros</span>
+            <img src="img/fabricademontros.webp" alt="Projeto 6" loading="lazy">
           </button>
 
           <button class="project-card" data-project="7">
             <span class="project-name">Editorial de Moda | Laura Brocco</span>
-            <img src="img/colagemmariana3.webp" alt="Projeto 7" loading="eager">
+            <img src="img/colagemmariana3.webp" alt="Projeto 7" loading="lazy">
           </button>
 
           <button class="project-card" data-project="8">
-            <span class="project-name">Campanha Institucional | Bar do Dragão</span>
-            <img src="img/bardodragaodecima.webp" alt="Projeto 8" loading="eager">
+            <span class="project-name">Campanha Institucional | Bar do DragÃ£o</span>
+            <img src="img/bardodragaodecima.webp" alt="Projeto 8" loading="lazy">
           </button>
 
           <button class="project-card" data-project="9">
             <span class="project-name">Videoclipe | FATO Duorum</span>
-            <img src="img/fatoduarumcapa.webp" alt="Projeto 9" loading="eager">
+            <img src="img/fatoduarumcapa.webp" alt="Projeto 9" loading="lazy">
           </button>
 
 
           <button class="project-card" data-project="10">
-            <span class="project-name">Med Plus Nova Geração | Philozon</span>
-            <img src="img/medplusphilozon.webp" alt="Projeto 10" loading="eager">
+            <span class="project-name">Med Plus Nova GeraÃ§Ã£o | Philozon</span>
+            <img src="img/medplusphilozon.webp" alt="Projeto 10" loading="lazy">
           </button>
 
           <button class="project-card" data-project="11">
             <span class="project-name">La Cocina Mescla | Encontro de grandes nomes da gastronomia</span>
-            <img src="img/coccina.webp" alt="Projeto 9" loading="eager">
+            <img src="img/coccina.webp" alt="Projeto 9" loading="lazy">
           </button>
 
           <button class="project-card" data-project="12">
-            <span class="project-name">Camvel Porto Belo | Vídeo Promocional</span>
-            <img src="img/camvel.webp" alt="Projeto 10" loading="eager">
+            <span class="project-name">Camvel Porto Belo | VÃ­deo Promocional</span>
+            <img src="img/camvel.webp" alt="Projeto 10" loading="lazy">
           </button>
 
         </div>
@@ -216,7 +208,7 @@
 
         <div class="film-block">
 
-          <img src="img/cadafalsohorizontal.webp" alt="Cadafalso" loading="eager">
+          <img src="img/cadafalsohorizontal.webp" alt="Cadafalso" loading="lazy">
 
           <button class="film-btn" data-film="cadafalso">
             SOBRE O FILME
@@ -226,7 +218,7 @@
 
         <div class="film-block etre-img">
 
-          <img src="img/etrehorizontal.webp" alt="ÊTRE" class="etre-img" loading="eager">
+          <img src="img/etrehorizontal.webp" alt="ÃŠTRE" class="etre-img" loading="lazy">
 
           <button class="film-btn" data-film="etre">
             SOBRE O FILME
@@ -258,7 +250,7 @@
             <h2 id="modal-title"></h2>
             <p id="modal-summary"></p>
             <a id="modal-watch" class="modal-watch" href="#modal-videos">
-              <i class="fa-solid fa-play"></i><span>Assistir vídeo</span>
+              <i class="fa-solid fa-play"></i><span>Assistir vÃ­deo</span>
             </a>
           </div>
         </div>
@@ -303,7 +295,7 @@
             <div class="modal-info">
               <i class="fa-regular fa-star"></i>
               <div>
-              <span>Serviços</span>
+              <span>ServiÃ§os</span>
               <strong id="modal-services"></strong>
               </div>
 
@@ -331,7 +323,7 @@
         </section>
 
         <section id="modal-videos" class="modal-video-section">
-          <h3>Vídeos</h3>
+          <h3>VÃ­deos</h3>
           <div id="modal-videos-grid" class="modal-videos-grid"></div>
         </section>
 
@@ -349,13 +341,13 @@
         <div class="modal-project-navigation">
           <button id="modal-prev-project" type="button"><i class="fa-solid fa-arrow-left"></i><span>Projeto anterior</span></button>
           <i class="fa-solid fa-grip modal-project-navigation-icon" aria-hidden="true"></i>
-          <button id="modal-next-project" type="button"><span>Próximo projeto</span><i class="fa-solid fa-arrow-right"></i></button>
+          <button id="modal-next-project" type="button"><span>PrÃ³ximo projeto</span><i class="fa-solid fa-arrow-right"></i></button>
         </div>
 
         <div class="modal-cta">
           <i class="fa-solid fa-clapperboard"></i>
-          <div><span>Vamos criar juntos?</span><h3>Tem um projeto em mente?</h3><p>Fale com a gente e transforme sua ideia em algo memorável.</p></div>
-          <a class="budget-btn" href="https://wa.me/5547999988082" target="_blank">Solicitar orçamento <i class="fa-solid fa-arrow-right"></i></a>
+          <div><span>Vamos criar juntos?</span><h3>Tem um projeto em mente?</h3><p>Fale com a gente e transforme sua ideia em algo memorÃ¡vel.</p></div>
+          <a class="budget-btn" href="https://wa.me/5547999988082" target="_blank" rel="noopener noreferrer">Solicitar orÃ§amento <i class="fa-solid fa-arrow-right"></i></a>
         </div>
 
       </div>
@@ -376,19 +368,19 @@
 
           <div class="film-meta-bar">
 
-            <span id="film-genre">DRAMA PSICOLÓGICO</span>
-            <span>•</span>
+            <span id="film-genre">DRAMA PSICOLÃ“GICO</span>
+            <span>â€¢</span>
 
             <span id="film-duration">14 MIN</span>
-            <span>•</span>
+            <span>â€¢</span>
 
             <span id="film-year">2024</span>
-            <span>•</span>
+            <span>â€¢</span>
 
             <span id="film-rating">14</span>
-            <span>•</span>
+            <span>â€¢</span>
 
-            <span id="film-classification">CLASSIFICAÇÃO 14 ANOS</span>
+            <span id="film-classification">CLASSIFICAÃ‡ÃƒO 14 ANOS</span>
 
           </div>
 
@@ -411,23 +403,23 @@
           <div id="film-tech-block">
 
             <h4 class="film-section-title">
-              FICHA TÉCNICA
+              FICHA TÃ‰CNICA
             </h4>
 
             <div class="film-tech-grid">
 
               <div>
-                <span>DIREÇÃO</span>
+                <span>DIREÃ‡ÃƒO</span>
                 <p id="film-director"></p>
               </div>
 
               <div>
-                <span>EDIÇÃO</span>
+                <span>EDIÃ‡ÃƒO</span>
                 <p id="film-editor"></p>
               </div>
 
               <div>
-                <span>PRODUÇÃO</span>
+                <span>PRODUÃ‡ÃƒO</span>
                 <p id="film-producer"></p>
               </div>
 
@@ -442,7 +434,7 @@
               </div>
 
               <div>
-                <span>DURAÇÃO</span>
+                <span>DURAÃ‡ÃƒO</span>
                 <p id="film-runtime"></p>
               </div>
 
@@ -465,7 +457,7 @@
                 ASSISTIR
               </h4>
 
-              <a id="film-trailer" href="#" target="_blank" class="watch-btn">
+              <a id="film-trailer" href="#" target="_blank" rel="noopener noreferrer" class="watch-btn">
                 ASSISTIR TRAILER
               </a>
 
@@ -474,7 +466,7 @@
             <div id="film-festivals-block">
 
               <h4 class="film-section-title">
-                FESTIVAIS E EXIBIÇÕES
+                FESTIVAIS E EXIBIÃ‡Ã•ES
               </h4>
 
               <p id="film-festivals"></p>
@@ -500,7 +492,7 @@
   </main>
 
   <footer class="site-footer">
-    <p>© 2026 FUKUIFILM. Todos os direitos reservados.</p>
+    <p>Â© 2026 FUKUIFILM. Todos os direitos reservados.</p>
   </footer>
   <script src="projetos.js"></script>
 
