@@ -19,15 +19,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Oswald:wght@400&display=swap"
     rel="stylesheet" />
   <!-- LOGO -->
-  <link rel="preload" href="img/FUKUIFILM-HORIZONTAL-BRANCO.png" as="image">
+  <link rel="preload" href="img/FUKUIFILM-HORIZONTAL-BRANCO.webp" as="image">
   <!-- PROJETOS -->
-  <link rel="preload" href="img/foto1tortinha.jpeg" as="image">
-  <link rel="preload" as="image" href="img/fabricademontros.jpeg">
-  <link rel="preload" href="img/foto3.jpeg" as="image">
-  <link rel="preload" href="img/foto4.jpg" as="image">
+  <link rel="preload" href="img/foto1tortinha.webp" as="image">
+  <link rel="preload" as="image" href="img/fabricademontros.webp">
+  <link rel="preload" href="img/foto3.webp" as="image">
+  <link rel="preload" href="img/foto4.webp" as="image">
   <!-- FILMES -->
-  <link rel="preload" href="img/cadafalsohorizontal.jpg" as="image">
-  <link rel="preload" href="img/etrehorizontal.png" as="image">
+  <link rel="preload" href="img/cadafalsohorizontal.webp" as="image">
+  <link rel="preload" href="img/etrehorizontal.webp" as="image">
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="responsive.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
@@ -41,7 +41,7 @@
 
       <!-- LOGO ESQUERDA -->
       <a href="index.html" class="menu-brand">
-        <img src="img/FUKUIFILM-HORIZONTAL-BRANCO.png" alt="FUKUIFILM" class="menu-logo" loading="eager">
+        <img src="img/FUKUIFILM-HORIZONTAL-BRANCO.webp" alt="FUKUIFILM" class="menu-logo" loading="eager">
       </a>
 
       <!-- MENU CENTRO -->
@@ -84,70 +84,117 @@
         </h1>
       </div>
 
+      <div class="project-showcase" aria-live="polite">
+
+        <button class="project-nav project-nav-prev" type="button" aria-label="Projeto anterior">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+
+        <div class="project-showcase-content">
+
+          <span class="project-counter" id="project-counter">1 / 12</span>
+
+          <div class="project-showcase-header">
+
+            <h2 class="project-showcase-title" id="project-showcase-title">
+              Retratos Corporativos | Growth
+            </h2>
+
+            <button id="open-project-modal" class="project-details-btn">
+              Ver detalhes
+            </button>
+
+          </div>
+
+          <div class="project-photo-grid">
+            <figure class="project-photo project-photo-wide">
+              <img id="project-image-wide" src="img/growthlogo.webp" alt="Retratos Corporativos | Growth"
+                loading="eager">
+            </figure>
+
+            <figure class="project-photo project-photo-tall">
+              <img id="project-image-tall" src="img/growthlogo.webp" alt="Retratos Corporativos | Growth"
+                loading="eager">
+            </figure>
+
+            <figure class="project-photo project-photo-square">
+              <img id="project-image-square" src="img/growthlogo.webp" alt="Retratos Corporativos | Growth"
+                loading="eager">
+            </figure>
+          </div>
+
+        </div>
+
+        <button class="project-nav project-nav-next" type="button" aria-label="Próximo projeto">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+
+      </div>
+
       <div class="projects-red-frame">
 
         <div class="projects-grid-custom">
 
-          <button class="project-card" data-project="6">
+          <button class="project-card" data-project="1">
             <span class="project-name">Retratos Corporativos | Growth</span>
-            <img src="img/growthlogo.png" alt="Projeto 6" loading="eager">
+            <img src="img/growthlogo.webp" alt="Projeto 1" loading="eager">
           </button>
 
-          <button class="project-card" data-project="8">
+          <button class="project-card" data-project="2">
             <span class="project-name">Lançamento de Produto | Ozoncare</span>
-            <img src="img/ozoncare4.jpeg" alt="Projeto 2" loading="eager">
+            <img src="img/ozoncare4.webp" alt="Projeto 2" loading="eager">
+          </button>
+
+          <button class="project-card" data-project="3">
+            <span class="project-name">Fotografia de Cardápio | Seu Conde</span>
+            <img src="img/foto4.webp" alt="Projeto 3" loading="eager">
           </button>
 
           <button class="project-card" data-project="4">
-            <span class="project-name">Fotografia de Cardápio | Seu Conde</span>
-            <img src="img/foto4.jpg" alt="Projeto 3" loading="eager">
+            <span class="project-name">Delas Summit | Sebrae</span>
+            <img src="img/delassummitpreenchimento.webp" alt="Projeto 4" loading="eager">
           </button>
 
           <button class="project-card" data-project="5">
-            <span class="project-name">Delas Summit | Sebrae</span>
-            <img src="img/delassummitpreenchimento.jpeg" alt="Projeto 5" loading="eager">
-          </button>
-
-          <button class="project-card" data-project="1">
             <span class="project-name">Produção de Conteúdo | Casa Inti Café</span>
-            <img src="img/foto1tortinha.jpeg" alt="Projeto 3" loading="eager">
+            <img src="img/foto1tortinha.webp" alt="Projeto 5" loading="eager">
           </button>
 
 
-          <button class="project-card" data-project="2">
+          <button class="project-card" data-project="6">
             <span class="project-name">Léo Stronda | Fábrica de Monstros</span>
-            <img src="img/fabricademontros.jpeg" alt="Projeto 3" loading="eager">
+            <img src="img/fabricademontros.webp" alt="Projeto 6" loading="eager">
           </button>
 
           <button class="project-card" data-project="7">
             <span class="project-name">Editorial de Moda | Laura Brocco</span>
-            <img src="img/colagemmariana3.jpeg" alt="Projeto 7" loading="eager">
+            <img src="img/colagemmariana3.webp" alt="Projeto 7" loading="eager">
           </button>
 
           <button class="project-card" data-project="8">
             <span class="project-name">Campanha Institucional | Bar do Dragão</span>
-            <img src="img/bardodragaodecima.jpeg" alt="Projeto 8" loading="eager">
+            <img src="img/bardodragaodecima.webp" alt="Projeto 8" loading="eager">
           </button>
 
-          <button class="project-card" data-project="8">
+          <button class="project-card" data-project="9">
             <span class="project-name">Videoclipe | FATO Duorum</span>
-            <img src="img/fatoduarumcapa.jpeg" alt="Projeto 8" loading="eager">
+            <img src="img/fatoduarumcapa.webp" alt="Projeto 9" loading="eager">
           </button>
 
 
-          <button class="project-card" data-project="8">
+          <button class="project-card" data-project="10">
             <span class="project-name">Med Plus Nova Geração | Philozon</span>
-            <img src="img/medplusphilozon.png" alt="Projeto 8" loading="eager">
+            <img src="img/medplusphilozon.webp" alt="Projeto 10" loading="eager">
           </button>
 
-          <button class="project-card" data-project="8">
+          <button class="project-card" data-project="11">
             <span class="project-name">La Cocina Mescla | Encontro de grandes nomes da gastronomia</span>
-            <img src="img/coccina.jpeg" alt="Projeto 8" loading="eager">
+            <img src="img/coccina.webp" alt="Projeto 9" loading="eager">
           </button>
 
-          <button class="project-card" data-project="8">
+          <button class="project-card" data-project="12">
             <span class="project-name">Camvel Porto Belo | Vídeo Promocional</span>
-            <img src="img/camvel.PNG" alt="Projeto 8" loading="eager">
+            <img src="img/camvel.webp" alt="Projeto 10" loading="eager">
           </button>
 
         </div>
@@ -169,7 +216,7 @@
 
         <div class="film-block">
 
-          <img src="img/cadafalsohorizontal.jpg" alt="Cadafalso" loading="eager">
+          <img src="img/cadafalsohorizontal.webp" alt="Cadafalso" loading="eager">
 
           <button class="film-btn" data-film="cadafalso">
             SOBRE O FILME
@@ -179,7 +226,7 @@
 
         <div class="film-block etre-img">
 
-          <img src="img/etrehorizontal.png" alt="ÊTRE" class="etre-img" loading="eager">
+          <img src="img/etrehorizontal.webp" alt="ÊTRE" class="etre-img" loading="eager">
 
           <button class="film-btn" data-film="etre">
             SOBRE O FILME
@@ -191,6 +238,130 @@
 
     </section>
 
+    <!-- ========================= -->
+    <!-- MODAL DOS PROJETOS -->
+    <!-- ========================= -->
+
+    <div class="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+
+      <div class="project-modal-container">
+
+        <button class="project-modal-close" type="button" aria-label="Fechar detalhes do projeto">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div class="project-modal-hero">
+          <img id="modal-cover" src="" alt="">
+          <div class="project-modal-hero-overlay"></div>
+          <div class="project-modal-title-block">
+            <span class="modal-category" id="modal-category"></span>
+            <h2 id="modal-title"></h2>
+            <p id="modal-summary"></p>
+            <a id="modal-watch" class="modal-watch" href="#modal-videos">
+              <i class="fa-solid fa-play"></i><span>Assistir vídeo</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="project-modal-content">
+
+          <div class="project-modal-main">
+            <h3>Sobre o projeto</h3>
+            <div id="modal-description"></div>
+
+          </div>
+
+          <aside class="project-modal-sidebar">
+
+            <div class="modal-info">
+              <i class="fa-regular fa-user"></i>
+              <div>
+              <span>Cliente</span>
+              <strong id="modal-client"></strong>
+              </div>
+
+            </div>
+
+            <div class="modal-info">
+              <i class="fa-regular fa-folder"></i>
+              <div>
+              <span>Categoria</span>
+              <strong id="modal-type"></strong>
+              </div>
+
+            </div>
+
+            <div class="modal-info">
+              <i class="fa-regular fa-calendar"></i>
+              <div>
+              <span>Ano</span>
+              <strong id="modal-year"></strong>
+              </div>
+
+            </div>
+
+            <div class="modal-info">
+              <i class="fa-regular fa-star"></i>
+              <div>
+              <span>Serviços</span>
+              <strong id="modal-services"></strong>
+              </div>
+
+            </div>
+
+            <div class="modal-info modal-info--deliveries">
+              <i class="fa-regular fa-paper-plane"></i>
+              <div>
+                <span>Entregas</span>
+                <strong id="modal-deliveries"></strong>
+              </div>
+            </div>
+
+          </aside>
+
+        </div>
+
+        <section class="modal-gallery-section">
+
+          <h3>Galeria</h3>
+
+          <div id="modal-gallery" class="modal-gallery">
+          </div>
+
+        </section>
+
+        <section id="modal-videos" class="modal-video-section">
+          <h3>Vídeos</h3>
+          <div id="modal-videos-grid" class="modal-videos-grid"></div>
+        </section>
+
+        <section class="modal-bottom-grid">
+          <div class="modal-behind-section">
+            <h3>Bastidores</h3>
+            <div id="modal-behind" class="modal-behind-gallery"></div>
+          </div>
+          <div class="modal-results-section">
+            <h3>Resultados</h3>
+            <ul id="modal-results"></ul>
+          </div>
+        </section>
+
+        <div class="modal-project-navigation">
+          <button id="modal-prev-project" type="button"><i class="fa-solid fa-arrow-left"></i><span>Projeto anterior</span></button>
+          <i class="fa-solid fa-grip modal-project-navigation-icon" aria-hidden="true"></i>
+          <button id="modal-next-project" type="button"><span>Próximo projeto</span><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+
+        <div class="modal-cta">
+          <i class="fa-solid fa-clapperboard"></i>
+          <div><span>Vamos criar juntos?</span><h3>Tem um projeto em mente?</h3><p>Fale com a gente e transforme sua ideia em algo memorável.</p></div>
+          <a class="budget-btn" href="https://wa.me/5547999988082" target="_blank">Solicitar orçamento <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+      </div>
+
+    </div>
+
     <!-- MODAL DOS FILMES -->
 
     <div class="film-modal">
@@ -201,7 +372,7 @@
 
         <div class="film-poster">
 
-          <img id="film-image-1" src="img/cadafalsohorizontal.jpg" alt="">
+          <img id="film-image-1" src="img/cadafalsohorizontal.webp" alt="">
 
           <div class="film-meta-bar">
 

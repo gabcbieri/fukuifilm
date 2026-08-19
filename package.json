@@ -1,0 +1,22 @@
+{
+  "name": "fukuifilm",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "optimize:images": "node scripts/optimize-images.mjs"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "sharp": "^0.35.3"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "aos": "^2.3.4",
+    "gsap": "^3.15.0",
+    "swiper": "^14.0.1",
+    "tailwindcss": "^4.3.2"
+  }
+}
