@@ -1,31 +1,9 @@
-﻿<!doctype html>
-<html lang="pt-BR">
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FUKUIFILM | InÃ­cio</title>
-  <meta name="description"
-    content="fukuifilm Ã© uma agÃªncia de marketing e direÃ§Ã£o visual focada em presenÃ§a de marca, publicidade, filmes e portfÃ³lio autoral." />
-  <meta name="robots" content="index, follow" />
-  <meta name="theme-color" content="#0b0b0b" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="fukuifilm" />
-  <meta property="og:description"
-    content="Marketing, publicidade e direÃ§Ã£o visual com presenÃ§a, memÃ³ria e sofisticaÃ§Ã£o." />
-  <meta property="og:locale" content="pt_BR" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Oswald:wght@400&display=swap"
-    rel="stylesheet" />
-  <link rel="preload" href="img/FUKUIFILM-HORIZONTAL-BRANCO.webp" as="image">
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="responsive.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-  <link rel="icon" type="image/png" href="img/ico.ico" />
-</head>
+<BaseLayout title="FUKUIFILM | Início" description="Fotografia, campanhas, filmes e direção visual com presença, memória e sofisticação.">
 
-<body>
   <nav class="floating-menu">
 
     <div class="menu-contents">
@@ -37,11 +15,11 @@
 
       <!-- MENU CENTRO -->
       <ul id="main-navigation">
-        <li><a href="#">InÃ­cio</a></li>
+        <li><a href="#">Início</a></li>
         <li><a href="#sobre">Sobre</a></li>
         <li><a href="#projetos">Projetos</a></li>
-        <li><a href="#metodo">MÃ©todo</a></li>
-        <li><a href="#servicos">ServiÃ§os</a></li>
+        <li><a href="#metodo">Método</a></li>
+        <li><a href="#servicos">Serviços</a></li>
         <li class="nav-instagram">
           <a href="https://www.instagram.com/fukuifilm/" target="_blank" rel="noopener noreferrer">
             <i class="fab fa-instagram"></i>
@@ -58,10 +36,10 @@
         </a>
 
         <a class="budget-btn" href="https://wa.me/5547999988082" target="_blank" rel="noopener noreferrer">
-          Solicitar orÃ§amento
+          Solicitar orçamento
         </a>
 
-        <!-- HAMBURGUER â€” visÃ­vel apenas em mobile/tablet via CSS -->
+        <!-- HAMBURGUER — visível apenas em mobile/tablet via CSS -->
         <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false"
           aria-controls="main-navigation">
           <i class="fas fa-bars"></i>
@@ -90,7 +68,7 @@
       <div class="hero-overlay">
 
         <p class="hero-kicker">
-          FOTOGRAFIA <span>â€¢</span> CAMPANHAS <span>â€¢</span> FILMES
+          FOTOGRAFIA <span>•</span> CAMPANHAS <span>•</span> FILMES
         </p>
 
         <h1 class="hero-title">
@@ -98,14 +76,14 @@
         </h1>
 
         <p class="hero-description">
-          Captamos histÃ³rias que conectam marcas e pessoas.
+          Captamos histórias que conectam marcas e pessoas.
         </p>
 
         <div class="hero-actions">
 
           <a href="https://wa.me/5547999988082" class="btn-secondary" target="_blank" rel="noopener noreferrer">
-            Solicitar orÃ§amento
-            <span class="btn-arrow">â†’</span>
+            Solicitar orçamento
+            <span class="btn-arrow">→</span>
           </a>
 
         </div>
@@ -122,13 +100,13 @@
         <div class="about-left">
 
           <span class="about-kicker">
-            EXPERIÃŠNCIA QUE GERA RESULTADO.
+            EXPERIÊNCIA QUE GERA RESULTADO.
           </span>
 
           <h2>
             + de 10 <br> anos<br>
             contando<br>
-            histÃ³rias.
+            histórias.
           </h2>
 
         </div>
@@ -152,7 +130,7 @@
           </div>
 
           <div class="stat-item">
-            <h3>+ milhÃµes</h3>
+            <h3>+ milhões</h3>
             <p>de pessoas impactadas</p>
           </div>
 
@@ -192,25 +170,25 @@
 
         <a href="projetos.html" class="projects-link">
           Ver projetos em destaque
-          <span class="arrow">â†’</span>
+          <span class="arrow">→</span>
         </a>
 
       </div>
 
     </section>
 
-    <!-- MÃ‰TODO -->
+    <!-- MÉTODO -->
     <section id="metodo" class="method-section">
 
       <div class="method-header">
         <h2>
           NOSSO<br>
-          MÃ‰TODO
+          MÉTODO
         </h2>
 
         <p>
-          ESTRATÃ‰GIA, CRIAÃ‡ÃƒO E<br>
-          EXECUÃ‡ÃƒO QUE TRANSFORMAM<br>
+          ESTRATÉGIA, CRIAÇÃO E<br>
+          EXECUÇÃO QUE TRANSFORMAM<br>
           IDEIAS EM RESULTADOS
         </p>
       </div>
@@ -223,15 +201,15 @@
             <img src="img/entendimento.webp" alt="Entendimento">
             <div class="method-overlay">
               <h3>ENTENDIMENTO</h3>
-              <p>Compreendemos profundamente sua marca, objetivos e pÃºblico para criar uma estratÃ©gia sÃ³lida.</p>
+              <p>Compreendemos profundamente sua marca, objetivos e público para criar uma estratégia sólida.</p>
             </div>
           </div>
 
           <div class="method-slide">
-            <img src="img/direcaoagua.webp" alt="DireÃ§Ã£o">
+            <img src="img/direcaoagua.webp" alt="Direção">
             <div class="method-overlay">
-              <h3>DIREÃ‡ÃƒO</h3>
-              <p>Definimos caminhos criativos que conectam propÃ³sito, estÃ©tica e resultado.</p>
+              <h3>DIREÇÃO</h3>
+              <p>Definimos caminhos criativos que conectam propósito, estética e resultado.</p>
             </div>
           </div>
 
@@ -239,7 +217,7 @@
             <img src="img/metodo.webp" alt="Processo">
             <div class="method-overlay">
               <h3>PROCESSO</h3>
-              <p>Planejamos e executamos cada etapa com precisÃ£o e consistÃªncia.</p>
+              <p>Planejamos e executamos cada etapa com precisão e consistência.</p>
             </div>
           </div>
 
@@ -247,7 +225,7 @@
             <img src="img/entrega.webp" alt="Entrega">
             <div class="method-overlay">
               <h3>ENTREGA</h3>
-              <p>Finalizamos cada projeto com excelÃªncia, garantindo impacto e valor.</p>
+              <p>Finalizamos cada projeto com excelência, garantindo impacto e valor.</p>
             </div>
           </div>
 
@@ -269,7 +247,7 @@
 
     </section>
 
-    <!-- SERVIÃ‡OS -->
+    <!-- SERVIÇOS -->
     <section id="servicos" class="services-section">
 
       <h2 class="services-title">
@@ -284,7 +262,7 @@
             <img src="img/etrehorizontal.webp" alt="Filmes" loading="lazy">
             <div class="service-overlay">
               <h3>FILMES</h3>
-              <p>ProduÃ§Ãµes cinematogrÃ¡ficas para marcas, campanhas e projetos autorais.</p>
+              <p>Produções cinematográficas para marcas, campanhas e projetos autorais.</p>
             </div>
           </article>
 
@@ -292,7 +270,7 @@
             <img src="img/fotografia.webp" alt="Fotografia" loading="lazy">
             <div class="service-overlay">
               <h3>FOTOGRAFIA</h3>
-              <p>Ensaios, produtos, gastronomia e conteÃºdo visual de alto impacto.</p>
+              <p>Ensaios, produtos, gastronomia e conteúdo visual de alto impacto.</p>
             </div>
           </article>
 
@@ -300,15 +278,15 @@
             <img src="img/campanha.webp" alt="Campanhas" loading="lazy">
             <div class="service-overlay">
               <h3>CAMPANHAS</h3>
-              <p>EstratÃ©gias visuais que fortalecem presenÃ§a e posicionamento.</p>
+              <p>Estratégias visuais que fortalecem presença e posicionamento.</p>
             </div>
           </article>
 
           <article class="service-card">
-            <img src="img/duorum.webp" alt="DireÃ§Ã£o Visual" loading="lazy">
+            <img src="img/duorum.webp" alt="Direção Visual" loading="lazy">
             <div class="service-overlay">
-              <h3>DIREÃ‡ÃƒO VISUAL</h3>
-              <p>ConstruÃ§Ã£o estÃ©tica e narrativa para marcas memorÃ¡veis.</p>
+              <h3>DIREÇÃO VISUAL</h3>
+              <p>Construção estética e narrativa para marcas memoráveis.</p>
             </div>
           </article>
 
@@ -333,10 +311,12 @@
   </main>
 
   <footer class="site-footer">
-    <p>Â© 2026 FUKUIFILM. Todos os direitos reservados.</p>
+    <p>© 2026 FUKUIFILM. Todos os direitos reservados.</p>
   </footer>
 
-  <script src="script.js"></script>
-</body>
+</BaseLayout>
 
-</html>
+<script>
+  import "../scripts/home";
+  import "../scripts/motion";
+</script>

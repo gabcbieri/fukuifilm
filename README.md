@@ -1,6 +1,6 @@
 ﻿# FUKUIFILM
 
-Site institucional e portfólio da FUKUIFILM, construído com HTML, CSS, JavaScript e um servidor estático em Bun.
+Site institucional e portfólio desenvolvido com Astro, TypeScript, Tailwind CSS 4 e Docker. A identidade visual original foi preservada; a arquitetura e as interações foram modernizadas.
 
 ## Desenvolvimento
 
@@ -9,15 +9,45 @@ bun install
 bun run dev
 ```
 
-Acesse `http://localhost:3000`.
+Acesse `http://localhost:4321`.
 
-## Verificações
+## Qualidade e produção
 
 ```bash
-bun run typecheck
-bun run optimize:images
+bun run check
+bun run build
+bun run preview
 ```
 
-## Restaurar a versão anterior
+## Docker
 
-O estado anterior às otimizações está no commit `da8c146`. Para visualizá-lo sem alterar o histórico, use `git switch --detach da8c146`. Para desfazer o commit final das melhorias, use `git revert <commit>`.
+```bash
+docker compose up --build
+```
+
+Acesse `http://localhost:8080`.
+
+## Estrutura
+
+- `src/pages`: páginas Astro.
+- `src/layouts`: estrutura compartilhada e metadados.
+- `src/data`: conteúdo tipado dos projetos.
+- `src/scripts`: interações e animações em TypeScript.
+- `src/styles`: Tailwind, tokens visuais e animações.
+- `public`: imagens e CSS legado preservado para paridade visual.
+
+## Restauração
+
+A versão imediatamente anterior à migração está marcada pela tag `antes-migracao-astro` e pelo commit `4e75c19`.
+
+Para voltar preservando o histórico, reverta o commit da migração:
+
+```bash
+git revert <commit-da-migracao>
+```
+
+Para apenas inspecionar a versão anterior:
+
+```bash
+git switch --detach antes-migracao-astro
+```

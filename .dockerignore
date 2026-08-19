@@ -1,0 +1,11 @@
+﻿.git
+node_modules
+dist
+.vscode
+.agents
+*.log
+index.html
+projetos.html
+script.js
+projetos.js
+index.ts
