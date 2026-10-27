@@ -56,12 +56,13 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     <!-- INTRO COM VIDEO -->
     <section class="intro-video">
 
+      
       <video autoplay muted loop playsinline preload="metadata">
         <source
-          src="https://res.cloudinary.com/dtv1yh9pa/video/upload/v1782920136/VI%CC%81DEO_SITE_VERTICAL_V2_bce8zp.mp4"
+          src="https://res.cloudinary.com/dtv1yh9pa/video/upload/q_auto:eco/v1782920136/VI%CC%81DEO_SITE_VERTICAL_V2_bce8zp.mp4"
           type="video/mp4" media="(max-width: 767px)">
         <source
-          src="https://res.cloudinary.com/dtv1yh9pa/video/upload/v1782920126/VI%CC%81DEO_SITE_HORIZONTAL_V1_1_fejhfw.mp4"
+          src="https://res.cloudinary.com/dtv1yh9pa/video/upload/q_auto:eco/v1782920126/VI%CC%81DEO_SITE_HORIZONTAL_V1_1_fejhfw.mp4"
           type="video/mp4">
       </video>
 
@@ -250,60 +251,40 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     <!-- SERVIÇOS -->
     <section id="servicos" class="services-section">
 
-      <h2 class="services-title">
-        O QUE FAZEMOS
-      </h2>
-
-      <div class="services-slider">
-
-        <div class="services-track">
-
-          <article class="service-card">
-            <img src="img/etrehorizontal.webp" alt="Filmes" loading="lazy">
-            <div class="service-overlay">
-              <h3>FILMES</h3>
-              <p>Produções cinematográficas para marcas, campanhas e projetos autorais.</p>
-            </div>
-          </article>
-
-          <article class="service-card">
-            <img src="img/fotografia.webp" alt="Fotografia" loading="lazy">
-            <div class="service-overlay">
-              <h3>FOTOGRAFIA</h3>
-              <p>Ensaios, produtos, gastronomia e conteúdo visual de alto impacto.</p>
-            </div>
-          </article>
-
-          <article class="service-card">
-            <img src="img/campanha.webp" alt="Campanhas" loading="lazy">
-            <div class="service-overlay">
-              <h3>CAMPANHAS</h3>
-              <p>Estratégias visuais que fortalecem presença e posicionamento.</p>
-            </div>
-          </article>
-
-          <article class="service-card">
-            <img src="img/duorum.webp" alt="Direção Visual" loading="lazy">
-            <div class="service-overlay">
-              <h3>DIREÇÃO VISUAL</h3>
-              <p>Construção estética e narrativa para marcas memoráveis.</p>
-            </div>
-          </article>
-
+      <div class="services-heading">
+        <h2 class="services-title">O QUE FAZEMOS</h2>
+        <div class="services-tabs" role="tablist" aria-label="Nossos serviços">
+          <button class="service-tab is-active" type="button" role="tab" aria-selected="true" data-service="0"><span>01</span> FILMES</button>
+          <button class="service-tab" type="button" role="tab" aria-selected="false" data-service="1"><span>02</span> FOTOGRAFIA</button>
+          <button class="service-tab" type="button" role="tab" aria-selected="false" data-service="2"><span>03</span> CAMPANHAS</button>
+          <button class="service-tab" type="button" role="tab" aria-selected="false" data-service="3"><span>04</span> DIREÇÃO VISUAL</button>
         </div>
-
       </div>
 
-      <div class="services-controls">
+      <div class="services-grid">
+        <article class="service-card is-active" data-service-card="0" data-expandable="true">
+          <img src="img/etrevertical.webp" alt="Filmes" loading="lazy">
+          <div class="service-overlay">
+            <div class="service-label"><span>01</span><h3>FILMES</h3></div>
+            <i class="service-rule" aria-hidden="true"></i>
+            <p>Produções cinematográficas para marcas, campanhas e projetos autorais.</p>
+          </div>
+        </article>
 
-        <button id="prevServices" class="slider-btn prev" type="button" aria-label="Serviço anterior">
-          <i class="fas fa-chevron-left"></i>
-        </button>
+        <article class="service-card" data-service-card="1" data-expandable="false">
+          <img src="img/fotografia.webp" alt="Fotografia" loading="lazy">
+          <div class="service-overlay"><div class="service-label"><span>02</span><h3>FOTOGRAFIA</h3></div><p>Ensaios, produtos, gastronomia e conteúdo visual de alto impacto.</p></div>
+        </article>
 
-        <button id="nextServices" class="slider-btn next" type="button" aria-label="Próximo serviço">
-          <i class="fas fa-chevron-right"></i>
-        </button>
+        <article class="service-card" data-service-card="2" data-expandable="true">
+          <img src="img/ozoncarevertical.jpg" alt="Campanhas" loading="lazy">
+          <div class="service-overlay"><div class="service-label"><span>03</span><h3>CAMPANHAS</h3></div><p>Estratégias visuais que fortalecem presença e posicionamento.</p></div>
+        </article>
 
+        <article class="service-card" data-service-card="3" data-expandable="true">
+          <img src="img/duorum.webp" alt="Direção visual" loading="lazy">
+          <div class="service-overlay"><div class="service-label"><span>04</span><h3>DIREÇÃO VISUAL</h3></div><p>Construção estética e narrativa para marcas memoráveis.</p></div>
+        </article>
       </div>
 
     </section>

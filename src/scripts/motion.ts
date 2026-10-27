@@ -23,23 +23,6 @@ if (!reduceMotion) {
 
   revealTargets.forEach((element) => observer.observe(element));
 
-  const hero = document.querySelector<HTMLElement>(".hero-overlay");
-  const heroVideo = document.querySelector<HTMLElement>(".intro-video video");
-  let ticking = false;
-
-  const updateHero = () => {
-    const offset = Math.min(window.scrollY, window.innerHeight);
-    hero?.style.setProperty("transform", `translate3d(0, ${offset * 0.08}px, 0)`);
-    heroVideo?.style.setProperty("transform", `scale(1.04) translate3d(0, ${offset * 0.025}px, 0)`);
-    ticking = false;
-  };
-
-  window.addEventListener("scroll", () => {
-    if (ticking) return;
-    ticking = true;
-    requestAnimationFrame(updateHero);
-  }, { passive: true });
-
   document.querySelectorAll<HTMLElement>(".budget-btn, .btn-secondary, .projects-link").forEach((button) => {
     button.classList.add("motion-magnetic");
     button.addEventListener("pointermove", (event) => {

@@ -115,7 +115,7 @@ if (methodSlides.length && prevMethodBtn && nextMethodBtn) {
     }, { passive: true });
   }
 
-  // Teclado (so quando a secao esta visivel)
+  // Teclado (só quando a seção está visível)
   document.addEventListener("keydown", (e) => {
     const section = document.querySelector("#metodo");
     if (!section) return;
@@ -130,78 +130,35 @@ if (methodSlides.length && prevMethodBtn && nextMethodBtn) {
 
 
 /* =========================
-   SERVICOS SLIDER
+   SERVIÇOS: PAINÉIS EDITORIAIS
 ========================= */
 
-const track       = document.querySelector(".services-track");
-const prevServBtn = document.getElementById("prevServices");
-const nextServBtn = document.getElementById("nextServices");
-const cards       = document.querySelectorAll(".service-card");
+const serviceTabs = document.querySelectorAll<HTMLButtonElement>(".service-tab");
+const serviceCards = document.querySelectorAll<HTMLElement>(".service-card[data-service-card]");
+const servicesSection = document.querySelector<HTMLElement>(".services-section");
 
-if (track && prevServBtn && nextServBtn && cards.length) {
+function activateService(index: string) {
+  const selectedCard = Array.from(serviceCards).find((card) => card.dataset.serviceCard === index);
+  servicesSection?.classList.toggle("is-service-expanded", selectedCard?.dataset.expandable === "true");
 
-  let currentSlide = 0;
-
-  function getSlidesPerView() {
-    if (window.innerWidth <= 479) return 1;
-    if (window.innerWidth <= 767) return 1;
-    if (window.innerWidth <= 1023) return 1.4;
-    return 2;
-  }
-
-  function getMaxSlide() {
-    return Math.max(0, Math.ceil(cards.length / getSlidesPerView()) - 1);
-  }
-
-  function updateServices() {
-    const spv       = getSlidesPerView();
-    const cardWidth = cards[0].getBoundingClientRect().width + 20;
-    const maxSlide  = getMaxSlide();
-
-    currentSlide = Math.max(0, Math.min(maxSlide, currentSlide));
-
-    track.style.transform = `translateX(-${currentSlide * cardWidth * spv}px)`;
-
-    prevServBtn.classList.toggle("disabled", currentSlide === 0);
-    nextServBtn.classList.toggle("disabled", currentSlide >= maxSlide);
-  }
-
-  function moveServices(dir) {
-    currentSlide = Math.max(0, Math.min(getMaxSlide(), currentSlide + dir));
-    updateServices();
-  }
-
-  prevServBtn.addEventListener("click", () => moveServices(-1));
-  nextServBtn.addEventListener("click", () => moveServices(1));
-
-  // Swipe touch
-  let touchStartX = 0;
-  track.addEventListener("touchstart", e => {
-    touchStartX = e.changedTouches[0].clientX;
-  }, { passive: true });
-  track.addEventListener("touchend", e => {
-    const delta = e.changedTouches[0].clientX - touchStartX;
-    if (Math.abs(delta) < 40) return;
-    moveServices(delta < 0 ? 1 : -1);
-  }, { passive: true });
-
-  // Teclado (so quando a secao esta visivel)
-  document.addEventListener("keydown", (e) => {
-    const section = document.querySelector("#servicos");
-    if (!section) return;
-    const rect = section.getBoundingClientRect();
-    if (rect.top > window.innerHeight || rect.bottom < 0) return;
-    if (e.key === "ArrowLeft")  moveServices(-1);
-    if (e.key === "ArrowRight") moveServices(1);
+  serviceTabs.forEach((tab) => {
+    const active = tab.dataset.service === index;
+    tab.classList.toggle("is-active", active);
+    tab.setAttribute("aria-selected", String(active));
   });
 
-  // Recalcula ao redimensionar
-  window.addEventListener("resize", () => {
-    updateServices();
+  serviceCards.forEach((card) => {
+    card.classList.toggle("is-active", card.dataset.serviceCard === index);
   });
-
-  updateServices();
 }
+
+serviceTabs.forEach((tab) => {
+  tab.addEventListener("click", () => activateService(tab.dataset.service ?? "0"));
+});
+
+serviceCards.forEach((card) => {
+  card.addEventListener("click", () => activateService(card.dataset.serviceCard ?? "0"));
+});
 
 
 /* =========================
