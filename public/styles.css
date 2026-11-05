@@ -2568,3 +2568,1314 @@ body.modal-open {
         transform: none;
     }
 }
+
+/* =========================================
+   SOBRE — NOVA APRESENTAÇÃO INSTITUCIONAL
+========================================= */
+
+.about-page {
+    width: 100%;
+    background: #050505;
+    color: #f2eee5;
+    overflow: hidden;
+}
+
+.about-intro {
+    min-height: 100vh;
+    padding: 150px 6% 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-eyebrow {
+    display: block;
+    color: #ed1017;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .18em;
+    margin-bottom: 22px;
+}
+
+.about-intro-header {
+    margin-bottom: 65px;
+}
+
+.about-intro-header h2 {
+    font-size: clamp(55px, 7vw, 120px);
+    font-weight: 700;
+    line-height: .83;
+    letter-spacing: -.07em;
+}
+
+.about-intro-header h2 span,
+.team-header h2 span {
+    color: #ed1017;
+}
+
+.about-intro-content {
+    display: grid;
+    grid-template-columns: .8fr 1.2fr;
+    gap: 80px;
+    align-items: start;
+}
+
+.about-description {
+    max-width: 470px;
+}
+
+.about-description p {
+    color: #bdbdbd;
+    font-size: 15px;
+    line-height: 1.85;
+    margin-bottom: 25px;
+}
+
+.about-description strong {
+    color: #fff;
+}
+
+/* GALERIA */
+
+.about-gallery {
+    display: grid;
+    grid-template-columns: 1.15fr .85fr;
+    grid-template-rows: 230px 230px;
+    gap: 10px;
+}
+
+.about-gallery-item {
+    position: relative;
+    overflow: hidden;
+    background: #151515;
+}
+
+.about-gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .5s ease;
+}
+
+.about-gallery-item:hover img {
+    transform: scale(1.04);
+}
+
+.about-gallery-item span {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: #fff;
+    font-size: 9px;
+    letter-spacing: .15em;
+    z-index: 2;
+    text-shadow: 0 2px 8px #000;
+}
+
+.about-gallery-main {
+    grid-row: span 2;
+}
+
+.about-gallery-wide {
+    grid-column: span 2;
+}
+
+/* NÚMEROS */
+
+.about-numbers {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    padding: 55px 0;
+    margin-top: 65px;
+    border-top: 1px solid #292929;
+    border-bottom: 1px solid #292929;
+}
+
+.about-numbers div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.about-numbers strong {
+    color: #ed1017;
+    font-size: clamp(25px, 3vw, 42px);
+    font-weight: 600;
+}
+
+.about-numbers span {
+    color: #999;
+    font-size: 10px;
+    letter-spacing: .12em;
+}
+
+/* SLOGAN */
+
+.about-slogan {
+    text-align: center;
+    padding: 90px 20px 20px;
+}
+
+.slogan-japanese {
+    color: #f2eee5;
+    font-size: clamp(17px, 2.1vw, 27px);
+    line-height: 1.6;
+    margin-bottom: 18px;
+}
+
+.slogan-translation {
+    color: #888;
+    font-size: 15px;
+    font-style: italic;
+}
+
+
+/* =========================================
+   EQUIPE — POR TRÁS DAS HISTÓRIAS
+========================================= */
+
+.about-team {
+    min-height: 100vh;
+    padding: 110px 5.5% 100px;
+    background: #0b0b0b;
+}
+
+.team-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 50px;
+    margin-bottom: 55px;
+}
+
+.team-header h2 {
+    color: #f2eee5;
+    font-size: clamp(60px, 8vw, 105px);
+    font-weight: 600;
+    line-height: .88;
+    letter-spacing: -.06em;
+}
+
+.team-header > p {
+    max-width: 280px;
+    color: #888;
+    font-size: 12px;
+    line-height: 1.7;
+    margin-bottom: 8px;
+}
+
+/* GRID DA EQUIPE */
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.team-card {
+    min-width: 0;
+    background: #111;
+    border: 1px solid rgba(255, 255, 255, .07);
+    overflow: hidden;
+    transition: border-color .3s ease;
+}
+
+.team-card:hover {
+    border-color: rgba(237, 16, 23, .6);
+}
+
+.team-photo {
+    position: relative;
+    height: clamp(230px, 25vw, 350px);
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 50% 40%, #303030, #151515 65%);
+}
+
+.team-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .5s ease;
+}
+
+.team-card:hover .team-photo img {
+    transform: scale(1.04);
+}
+
+.team-photo span {
+    position: absolute;
+    bottom: 12px;
+    left: 15px;
+    color: rgba(255, 255, 255, .65);
+    font-size: 9px;
+    letter-spacing: .15em;
+}
+
+.team-info {
+    padding: 25px 20px 30px;
+}
+
+.team-role {
+    color: #ed1017;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: .15em;
+    margin-bottom: 10px;
+}
+
+.team-info h3 {
+    color: #f2eee5;
+    font-size: clamp(19px, 2vw, 25px);
+    font-weight: 500;
+    margin: 12px 0 9px;
+    margin-bottom: 12px;
+}
+
+.team-info p {
+    color: #858585;
+    font-size: 12px;
+    line-height: 1.6;
+    max-width: 280px;
+}
+
+
+/* =========================================
+   RESPONSIVIDADE — SOBRE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .about-intro {
+        padding: 130px 5% 70px;
+    }
+
+    .about-intro-content {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .about-description {
+        max-width: 650px;
+    }
+
+    .about-gallery {
+        grid-template-rows: 200px 200px;
+    }
+
+    .team-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .team-header > p {
+        max-width: 450px;
+    }
+
+    .team-photo {
+        height: 280px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .about-intro {
+        padding: 120px 20px 65px;
+    }
+
+    .about-intro-header {
+        margin-bottom: 35px;
+    }
+
+    .about-intro-header h2 {
+        font-size: clamp(52px, 13vw, 76px);
+    }
+
+    .about-description p {
+        font-size: 14px;
+    }
+
+    .about-gallery {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 220px 150px 150px;
+        gap: 7px;
+    }
+
+    .about-gallery-main {
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+
+    .about-gallery-wide {
+        grid-column: span 2;
+    }
+
+    .about-numbers {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px 15px;
+        margin-top: 45px;
+        padding: 35px 0;
+    }
+
+    .about-numbers strong {
+        font-size: 27px;
+    }
+
+    .about-numbers span {
+        font-size: 9px;
+    }
+
+    .about-slogan {
+        padding: 65px 5px 10px;
+    }
+
+    .slogan-japanese {
+        font-size: 17px;
+    }
+
+    .slogan-translation {
+        font-size: 13px;
+    }
+
+    .about-team {
+        padding: 80px 20px 65px;
+    }
+
+    .team-header {
+        margin-bottom: 35px;
+    }
+
+    .team-header h2 {
+        font-size: 64px;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .team-photo {
+        height: 350px;
+    }
+
+    .team-info {
+        padding: 20px;
+    }
+}
+
+
+/* =========================================
+   SOBRE — ESTRUTURA GERAL
+========================================= */
+
+.about-section {
+    display: block;
+    width: 100%;
+    min-height: 0;
+    padding: 80px 0 0;
+    background: #050505;
+}
+
+/* CARD ORIGINAL */
+
+.about-section .about-container {
+    width: calc(100% - 160px);
+    margin: 0 auto;
+}
+
+/* APRESENTAÇÃO */
+
+.about-section .about-intro {
+    width: 100%;
+}
+
+/* EQUIPE */
+
+.about-section .about-team {
+    width: 100%;
+}
+
+/* RESPONSIVIDADE DO CARD ORIGINAL */
+
+@media (max-width: 900px) {
+
+    .about-section {
+        padding-top: 50px;
+    }
+
+    .about-section .about-container {
+        width: calc(100% - 50px);
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .about-section .about-left {
+        padding: 40px 20px 40px 30px;
+    }
+
+    .about-section .about-center {
+        min-height: 350px;
+    }
+
+    .about-section .about-center img {
+        transform: none;
+        height: 100%;
+    }
+
+    .about-section .about-right {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 35px;
+        gap: 25px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .about-section {
+        padding-top: 35px;
+    }
+
+    .about-section .about-container {
+        width: calc(100% - 36px);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about-section .about-left {
+        padding: 35px 25px 15px;
+    }
+
+    .about-section .about-left h2 {
+        font-size: 60px;
+    }
+
+    .about-section .about-center {
+        height: 300px;
+    }
+
+    .about-section .about-center img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: none;
+    }
+
+    .about-section .about-right {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 25px;
+        gap: 25px 15px;
+    }
+
+    .about-section .stat-item h3 {
+        font-size: 28px;
+    }
+
+    .about-section .stat-item p {
+        font-size: 12px;
+    }
+
+}
+
+
+/* =========================================
+   PROJETOS — VITRINE EDITORIAL
+========================================= */
+
+.featured-projects {
+    background: #050505;
+    min-height: auto;
+    padding: 120px 5.5% 100px;
+    display: block;
+    overflow: hidden;
+}
+
+.projects-header {
+    margin-bottom: 55px;
+}
+
+.projects-heading-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 35px;
+}
+
+.projects-eyebrow {
+    color: #ed1017;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .18em;
+}
+
+.projects-index {
+    color: #777;
+    font-size: 10px;
+    letter-spacing: .12em;
+}
+
+.projects-heading {
+    color: #f2eee5;
+    font-family: "Inter", sans-serif;
+    font-size: clamp(55px, 7vw, 120px);
+    font-weight: 700;
+    line-height: .83;
+    letter-spacing: -.07em;
+    text-transform: uppercase;
+}
+
+.projects-heading span {
+    color: #ed1017;
+}
+
+.projects-intro {
+    max-width: 360px;
+    margin: 28px 0 0 auto;
+    color: #999;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* GALERIA ASSIMÉTRICA */
+
+.projects-gallery {
+    display: grid;
+    grid-template-columns: 1.35fr 1fr 1fr;
+    grid-template-rows: 270px 270px;
+    gap: 8px;
+    width: 100%;
+}
+
+.project-feature {
+    position: relative;
+    display: block;
+    min-width: 0;
+    overflow: hidden;
+    background: #151515;
+    color: #fff;
+}
+
+.project-feature-main {
+    grid-row: span 2;
+}
+
+.project-feature img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .7s cubic-bezier(.2, .7, .2, 1);
+}
+
+.project-feature::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, .85),
+        rgba(0, 0, 0, .05) 65%
+    );
+    transition: opacity .4s ease;
+}
+
+.project-feature:hover img {
+    transform: scale(1.045);
+}
+
+.project-feature-overlay {
+    position: absolute;
+    z-index: 1;
+    right: 22px;
+    bottom: 22px;
+    left: 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.project-feature-overlay > span:first-child {
+    color: rgba(255, 255, 255, .75);
+    font-size: 9px;
+    letter-spacing: .15em;
+    margin-bottom: 9px;
+}
+
+.project-feature-overlay h3 {
+    color: #fff;
+    font-size: clamp(22px, 2.5vw, 38px);
+    font-weight: 600;
+    letter-spacing: -.04em;
+    line-height: 1;
+}
+
+.project-feature-arrow {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 35px;
+    height: 35px;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(255, 255, 255, .55);
+    border-radius: 50%;
+    font-size: 17px;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: .3s ease;
+}
+
+.project-feature:hover .project-feature-arrow {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* RODAPÉ DA SEÇÃO */
+
+.projects-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    margin-top: 28px;
+    padding-top: 25px;
+    border-top: 1px solid rgba(255, 255, 255, .15);
+}
+
+.projects-footer > span {
+    color: #777;
+    font-size: 10px;
+    letter-spacing: .16em;
+}
+
+.projects-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 18px;
+    padding: 0;
+    background: transparent;
+    color: #f2eee5;
+    border-radius: 0;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .12em;
+    transition: color .3s ease;
+}
+
+.projects-link span {
+    display: grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    border: 1px solid rgba(255, 255, 255, .4);
+    border-radius: 50%;
+    font-size: 16px;
+    transition: .3s ease;
+}
+
+.projects-link:hover {
+    transform: none;
+}
+
+.projects-link:hover span {
+    transform: translate(3px, -3px);
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 900px) {
+
+    .featured-projects {
+        padding: 100px 5% 75px;
+    }
+
+    .projects-gallery {
+        grid-template-rows: 230px 230px;
+    }
+
+    .projects-heading {
+        font-size: clamp(55px, 7vw, 120px);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .featured-projects {
+        padding: 85px 20px 65px;
+    }
+
+    .projects-heading-top {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 28px;
+    }
+
+    .projects-heading {
+        font-size: clamp(52px, 13vw, 76px);
+    font-weight: 700;
+    line-height: .83;
+    letter-spacing: -.07em;
+    }
+
+    .projects-intro {
+        margin: 22px 0 0;
+        font-size: 13px;
+    }
+
+    .projects-gallery {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 280px 180px 180px;
+        gap: 6px;
+    }
+
+    .project-feature-main {
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+
+    .project-feature-overlay {
+        right: 12px;
+        bottom: 14px;
+        left: 12px;
+    }
+
+    .project-feature-overlay h3 {
+        font-size: clamp(19px, 5vw, 27px);
+    }
+
+    .project-feature-arrow {
+        width: 29px;
+        height: 29px;
+        opacity: 1;
+        transform: none;
+    }
+
+    .projects-footer {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .projects-footer > span {
+        font-size: 9px;
+    }
+
+    .projects-link {
+        font-size: 10px;
+    }
+
+}
+
+/* PONTUAÇÃO VERMELHA — IDENTIDADE FUKUIFILM */
+
+.projects-heading .projects-last-line {
+    display: inline-block;
+    white-space: nowrap;
+    color: #f2eee5;
+}
+
+.projects-heading .title-dot {
+    display: inline;
+    color: #ed1017;
+    white-space: nowrap;
+}
+
+.about-intro-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.about-description {
+    width: 100%;
+    max-width: 1100px;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.about-description p {
+    margin: 0;
+    color: #bdbdbd;
+    font-size: 15px;
+    line-height: 1.85;
+    text-align: left;
+}
+
+
+/* =========================
+   TEAM PHOTO BUTTON
+========================= */
+
+.team-photo-button {
+  width: 100%;
+  border: none;
+  padding: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  height: 480px; 
+}
+
+.team-photo-button img {
+  transition: transform 0.6s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.team-photo-button:hover img {
+  transform: scale(1.04);
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.team-photo-button,
+.team-photo-button:hover,
+.team-photo-button:focus,
+.team-photo-button:focus-visible {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.team-photo-hint {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  color: #fff;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: 0.3s ease;
+  z-index: 2;
+}
+
+.team-photo-button:hover .team-photo-hint {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* =========================
+   TEAM MODAL
+========================= */
+
+.team-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity .35s ease, visibility .35s ease;
+}
+
+.team-modal.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.team-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.88);
+  backdrop-filter: blur(12px);
+}
+
+.team-modal-content {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  width: min(100%, 1050px);
+  min-height: 480px;
+  background: #101010;
+  border: 1px solid rgba(255,255,255,.12);
+  overflow: hidden;
+  color: #fff;
+  transform: translateY(20px);
+  transition: transform .4s ease;
+}
+
+.team-modal.is-open .team-modal-content {
+  transform: translateY(0);
+}
+
+/* IMAGEM */
+
+.team-modal-image {
+  min-width: 0;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.team-modal-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* INFORMAÇÕES */
+
+.team-modal-info {
+  min-width: 0;
+  padding: 55px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.team-modal-eyebrow {
+  font-size: 10px;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+}
+
+.team-modal-role {
+  color: #999;
+  font-size: 10px;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.team-modal-info h2 {
+  color: #fff;
+  font-size: clamp(30px, 4vw, 44px);
+  line-height: 1.05;
+  margin-bottom: 25px;
+}
+
+/* DESCRIÇÃO */
+
+.team-modal-description {
+  color: #aaa;
+  font-size: 13px;
+  line-height: 1.85;
+  white-space: pre-line;
+}
+
+/* TEXTO LONGO: APENAS REDUZ O TAMANHO DA FONTE */
+
+.team-modal.is-long-description .team-modal-description {
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+/* FECHAR */
+
+.team-modal-close {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  z-index: 5;
+  width: 38px;
+  height: 38px;
+  border: 1px solid rgba(255,255,255,.25);
+  border-radius: 50%;
+  background: transparent;
+  color: #fff;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 650px) {
+  .team-modal {
+    padding: 12px;
+  }
+
+  .team-modal-content {
+    grid-template-columns: 35% 65%;
+    width: 100%;
+    min-height: 0;
+  }
+
+  .team-modal-info {
+    padding: 45px 18px 25px;
+  }
+
+  .team-modal-info h2 {
+    font-size: 25px;
+  }
+
+  .team-modal-description p {
+    font-size: 11px;
+    line-height: 1.65;
+  }
+
+  .team-modal.is-long-description .team-modal-description {
+    grid-template-columns: 1fr;
+  }
+}
+
+.team-modal-image img:hover {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+/* REMOVE QUALQUER EFEITO VERMELHO DAS FOTOS DA EQUIPE */
+
+.team-photo-button,
+.team-photo-button:hover,
+.team-photo-button:active,
+.team-photo-button:focus,
+.team-photo-button:focus-visible,
+.team-photo-button img,
+.team-photo-button:hover img {
+  border: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+  filter: none !important;
+}
+
+.team-photo-button::before,
+.team-photo-button::after,
+.team-photo-button:hover::before,
+.team-photo-button:hover::after {
+  content: none !important;
+  display: none !important;
+}
+
+.team-photo-button:hover {
+  background: transparent !important;
+}
+
+.team-photo-button,
+.team-photo-button:hover,
+.team-photo-button:focus,
+.team-photo-button:focus-visible,
+.team-photo-button:active {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  filter: none !important;
+}
+
+.team-photo-button img,
+.team-photo-button:hover img {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  filter: none !important;
+}
+
+.team-photo-button::before,
+.team-photo-button::after,
+.team-photo-button:hover::before,
+.team-photo-button:hover::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* REMOVE BORDA E EFEITOS DE HOVER DOS CARDS DA EQUIPE */
+
+.team-card,
+.team-card:hover,
+.team-card:focus-within {
+  border-color: transparent !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.team-card::before,
+.team-card::after,
+.team-card:hover::before,
+.team-card:hover::after {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+.team-photo-button,
+.team-photo-button:hover,
+.team-photo-button:focus,
+.team-photo-button:focus-visible {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* TABLETS */
+@media (min-width: 651px) and (max-width: 1024px) {
+  .team-modal-content {
+    grid-template-columns: 40% 60%;
+  }
+
+  .team-modal-image {
+    height: 480px;
+    min-height: 480px;
+    align-self: stretch;
+  }
+
+  .team-modal-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+/* CELULARES */
+@media (max-width: 650px) {
+  /* MODAL — CELULAR */
+.team-modal {
+  padding: 12px;
+  align-items: flex-start;
+  overflow-y: auto;
+}
+
+.team-modal-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 280px auto;
+  width: 100%;
+  height: auto;
+  max-height: none;
+  min-height: 0;
+  overflow: visible;
+  margin: auto 0;
+}
+
+.team-modal-image {
+  width: 100%;
+  height: 280px;
+  min-height: 280px;
+  overflow: hidden;
+}
+
+.team-modal-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.team-modal-info {
+  padding: 30px 22px;
+}
+
+.team-modal-description {
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.team-modal.is-long-description .team-modal-description {
+  font-size: 10px;
+  line-height: 1.65;
+}
+}
+
+@media (max-width: 450px) {
+  /* MODAL — CELULAR */
+.team-modal {
+  padding: 12px;
+  align-items: flex-start;
+  overflow-y: auto;
+}
+
+.team-modal-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 280px auto;
+  width: 100%;
+  height: auto;
+  max-height: none;
+  min-height: 0;
+  overflow: visible;
+  margin: auto 0;
+}
+
+.team-modal-image {
+  width: 100%;
+  height: 280px;
+  min-height: 280px;
+  overflow: hidden;
+}
+
+.team-modal-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.team-modal-info {
+  padding: 30px 22px;
+}
+
+.team-modal-description {
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.team-modal.is-long-description .team-modal-description {
+  font-size: 10px;
+  line-height: 1.65;
+}
+}
+
+.team-more-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0;
+  margin-bottom: 18px;
+  border: none;
+  background: transparent;
+  color: #ed1017;
+  font-family: "Inter", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.team-more-button span {
+  font-size: 14px;
+  transition: transform 0.3s ease;
+}
+
+.team-more-button:hover {
+  opacity: 0.75;
+}
+
+.team-more-button:hover span {
+  transform: translate(3px, -3px);
+}
+
+.team-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.team-more-button {
+  display: flex;
+  width: fit-content;
+  margin-top: 25px;
+}

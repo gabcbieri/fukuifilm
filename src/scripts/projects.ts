@@ -412,7 +412,12 @@ const projectDetails = [
     ["Videoclipe | FATO Duorum", "Videoclipe", "FATO Duorum", "2024", "Direção · Fotografia · Produção audiovisual", "Uma narrativa audiovisual de contrastes, criada para dar imagem, ritmo e textura à música.", "img/fatoduarumcapa.webp", ["img/fatoduarumcapa.webp", "img/fatoduorumolhar.webp", "img/fatoduorumvertical.webp", "img/fatoduorumsemletra.webp"], "Videoclipe · Still · Bastidores"],
     ["Med Plus Nova Geração | Philozon", "Lançamento de produto", "Philozon", "2025", "Fotografia · Vídeo · Direção criativa", "Uma apresentação visual clara e contemporânea para comunicar inovação e confiança em cada ponto de contato.", "img/medplusphilozon.webp", ["img/medplusphilozon.webp", "img/medplushorizontal.webp", "img/foto2.webp", "img/foto3.webp"], "Fotos de produto · Vídeo · Reels"],
     ["La Cocina Mescla", "Evento gastronômico", "La Cocina Mescla", "2025", "Fotografia · Vídeo · Cobertura", "Uma cobertura vibrante para registrar os grandes nomes, sabores e encontros que deram vida ao evento.", "img/coccina.webp", ["img/coccina.webp", "img/cafe.webp", "img/foto4.webp", "img/foto2.webp"], "Cobertura completa · Fotos · Reels"],
-    ["Camvel Porto Belo", "Vídeo promocional", "Camvel", "2025", "Produção audiovisual · Drone · Edição", "Um vídeo promocional que apresenta o empreendimento com ritmo, sofisticação e foco na experiência.", "img/camvel.webp", ["img/camvel.webp", "img/foto3.webp", "img/foto2.webp", "img/550A4842.webp"], "Filme promocional · Drone · Reels"]
+    
+    ["Camvel Porto Belo", "Vídeo promocional", "Camvel", "2025", "Produção audiovisual · Drone · Edição", "Um vídeo promocional que apresenta o empreendimento com ritmo, sofisticação e foco na experiência.", "img/camvel.webp", ["img/camvel.webp", "img/foto3.webp", "img/foto2.webp", "img/550A4842.webp"], "Filme promocional · Drone · Reels"],
+
+    ["Produção de Conteúdo | Element Fit", "Produção de conteúdo", "Element Fit", "2026", "Fotografia · Produção audiovisual · Direção criativa", "Produção de fotos e vídeos para a Element Fit, criando conteúdos visuais que apresentam a marca e acompanham seu universo de treino, movimento e bem-estar.", "img/element-fit-placeholder.webp", ["img/element-fit-placeholder.webp", "img/element-fit-placeholder.webp", "img/element-fit-placeholder.webp", "img/element-fit-placeholder.webp"], "Fotografias · Vídeos · Conteúdo para marca"],
+
+    ["Produção Audiovisual | Mauna Lani", "Produção audiovisual e redes sociais", "Mauna Lani", "2026", "Produção audiovisual · Fotografia · Conteúdo para redes sociais", "Produção audiovisual e conteúdo para redes sociais da Mauna Lani, apresentando a pousada e sua atmosfera por meio de vídeos, imagens e ações no perfil.", "img/mauna-lani-placeholder.webp", ["img/mauna-lani-placeholder.webp", "img/mauna-lani-placeholder.webp", "img/mauna-lani-placeholder.webp", "img/mauna-lani-placeholder.webp"], "Vídeos · Fotografias · Conteúdo para redes sociais"]
 ].map(([title, category, client, year, services, summary, cover, gallery, deliveries]) => ({ title, category, client, year, services, summary, cover, gallery, deliveries, description: `<p>${summary}</p><p>O trabalho foi desenvolvido com atenção aos detalhes e uma direção visual alinhada aos objetivos da marca, criando materiais versáteis para a campanha e os canais digitais.</p><p>Da concepção à entrega, cada escolha foi pensada para gerar identificação e uma experiência visual consistente.</p>`, results: ["Campanha completa alinhada à identidade da marca", "Conteúdos otimizados para redes sociais", "Fortalecimento da presença e posicionamento", "Materiais prontos para diferentes pontos de contato"] }));
 
 Object.assign(projectDetails[0], {
@@ -435,6 +440,50 @@ Object.assign(projectDetails[0], {
         { title: "Fortalecimento da marca empregadora", description: "Uma empresa forte começa pelas pessoas que a representam." }
     ]
 });
+
+
+Object.assign(projectDetails[12], {
+    description: `
+        <p>A FukuiFilm realiza produções audiovisuais e fotográficas para a Element Fit, desenvolvendo conteúdos que valorizam a experiência da marca e traduzem sua energia em imagens.</p>
+        <p>Entre vídeos e fotografias, cada produção explora diferentes aspectos da Element Fit e amplia as possibilidades de comunicação visual da marca.</p>
+    `,
+    results: [
+        {
+            title: "Conteúdo em diferentes formatos",
+            description: "Produções que reúnem vídeo e fotografia para a comunicação da Element Fit."
+        },
+        {
+            title: "Energia em destaque",
+            description: "Imagens que acompanham o movimento e a atmosfera da marca."
+        },
+        {
+            title: "Identidade visual",
+            description: "Conteúdos desenvolvidos para apresentar a Element Fit de forma consistente."
+        }
+    ]
+});
+
+Object.assign(projectDetails[13], {
+    description: `
+        <p>A FukuiFilm produz materiais audiovisuais para a Mauna Lani e desenvolve conteúdos e ações para o perfil da pousada nas redes sociais.</p>
+        <p>Os vídeos e as imagens apresentam os espaços e detalhes que fazem parte da experiência de se hospedar na Mauna Lani, aproximando o público do local e de sua proposta.</p>
+    `,
+    results: [
+        {
+            title: "A pousada em destaque",
+            description: "Conteúdos audiovisuais que apresentam a Mauna Lani ao público."
+        },
+        {
+            title: "Presença nas redes sociais",
+            description: "Materiais e ações pensados para a comunicação da pousada em seu perfil."
+        },
+        {
+            title: "Atmosfera e detalhes",
+            description: "Imagens que valorizam os espaços e a experiência da pousada."
+        }
+    ]
+});
+
 
 const modal = document.querySelector(".project-modal");
 const openButton = document.querySelector("#open-project-modal");

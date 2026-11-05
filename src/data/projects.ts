@@ -1,6 +1,6 @@
 export interface ProjectGalleryItem {
-  title: string;
-  image: string;
+    title: string;
+    image: string;
 }
 
 export const projectGalleryItems = [
@@ -51,5 +51,13 @@ export const projectGalleryItems = [
     {
         title: "Camvel Porto Belo | Vídeo Promocional",
         image: "img/camvel.webp",
+    },
+    {
+        title: "Produção de Conteúdo | Element Fit",
+        image: "img/element-fit-placeholder.webp"
+    },
+    {
+        title: "Produção Audiovisual | Mauna Lani",
+        image: "img/mauna-lani-placeholder.webp"
     },
 ] satisfies readonly ProjectGalleryItem[];

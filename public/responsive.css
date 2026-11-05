@@ -1628,3 +1628,10 @@ video {
   opacity: 1;
   transform: translateY(0);
 }
+
+@media (max-width: 600px) {
+    .about-description {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+}

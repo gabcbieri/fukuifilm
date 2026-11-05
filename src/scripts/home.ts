@@ -161,6 +161,7 @@ serviceCards.forEach((card) => {
 });
 
 
+
 /* =========================
    HOVER -> TOQUE (MOBILE)
    Ativa estados de :hover (service-card, projects-gallery img)
@@ -202,3 +203,118 @@ serviceCards.forEach((card) => {
   }, { passive: true });
 
 })();
+
+/* =========================
+   TEAM MODAL
+========================= */
+
+const teamModal = document.querySelector<HTMLElement>("#teamModal");
+
+if (teamModal) {
+  // Move o modal para o body para evitar conflitos
+  // com transform, filter e overflow das seções.
+  document.body.appendChild(teamModal);
+
+  const teamModalImage =
+    teamModal.querySelector<HTMLImageElement>("#teamModalImage");
+
+  const teamModalName =
+    teamModal.querySelector<HTMLElement>("#teamModalName");
+
+  const teamModalRole =
+    teamModal.querySelector<HTMLElement>("#teamModalRole");
+
+  const teamModalDescription =
+    teamModal.querySelector<HTMLElement>("#teamModalDescription");
+
+  const closeButton =
+    teamModal.querySelector<HTMLButtonElement>(".team-modal-close");
+
+  const backdrop =
+    teamModal.querySelector<HTMLElement>(".team-modal-backdrop");
+
+  const teamButtons =
+    document.querySelectorAll<HTMLButtonElement>(".team-photo-button");
+
+  if (
+    teamModalImage &&
+    teamModalName &&
+    teamModalRole &&
+    teamModalDescription &&
+    closeButton &&
+    backdrop
+  ) {
+    let previousFocus: HTMLElement | null = null;
+    let scrollPosition = 0;
+
+    // ABRIR MODAL
+    function openTeamModal(button: HTMLButtonElement) {
+      const image = button.querySelector<HTMLImageElement>("img");
+
+      if (!image) return;
+
+      previousFocus = button;
+      scrollPosition = window.scrollY;
+
+      teamModalImage.src = image.src;
+      teamModalImage.alt = image.alt;
+
+      teamModalName.textContent = button.dataset.name || "";
+      teamModalRole.textContent = button.dataset.role || "";
+
+      const description = button.dataset.description || "";
+
+      // Mantém a descrição original, sem reorganizar o conteúdo.
+      teamModalDescription.textContent = description;
+
+      // Apenas diminui a fonte quando o texto é longo.
+      teamModal.classList.toggle(
+        "is-long-description",
+        description.length > 400
+      );
+
+      teamModal.classList.add("is-open");
+      teamModal.setAttribute("aria-hidden", "false");
+
+      document.body.style.overflow = "hidden";
+
+      closeButton.focus({ preventScroll: true });
+    }
+
+    // FECHAR MODAL
+    function closeTeamModal() {
+      teamModal.classList.remove("is-open");
+      teamModal.classList.remove("is-long-description");
+      teamModal.setAttribute("aria-hidden", "true");
+
+      document.body.style.overflow = "";
+
+      window.scrollTo(0, scrollPosition);
+
+      previousFocus?.focus({ preventScroll: true });
+    }
+
+    // CLIQUE NAS FOTOS
+    teamButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        openTeamModal(button);
+      });
+    });
+
+    // BOTÃO DE FECHAR
+    closeButton.addEventListener("click", closeTeamModal);
+
+    // CLIQUE NO FUNDO ESCURO
+    backdrop.addEventListener("click", closeTeamModal);
+
+    // FECHAR COM ESC
+    document.addEventListener("keydown", (event) => {
+      if (
+        event.key === "Escape" &&
+        teamModal.classList.contains("is-open")
+      ) {
+        closeTeamModal();
+      }
+    });
+  }
+}

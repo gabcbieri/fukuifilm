@@ -1,3 +1,4 @@
+
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
@@ -39,7 +40,6 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           Solicitar orçamento
         </a>
 
-        <!-- HAMBURGUER — visível apenas em mobile/tablet via CSS -->
         <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false"
           aria-controls="main-navigation">
           <i class="fas fa-bars"></i>
@@ -56,7 +56,6 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     <!-- INTRO COM VIDEO -->
     <section class="intro-video">
 
-      
       <video autoplay muted loop playsinline preload="metadata">
         <source
           src="https://res.cloudinary.com/dtv1yh9pa/video/upload/q_auto:eco/v1782920136/VI%CC%81DEO_SITE_VERTICAL_V2_bce8zp.mp4"
@@ -93,85 +92,79 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
     </section>
 
-    <!-- SOBRE -->
-    <section id="sobre" class="about-section">
-
-      <div class="about-container">
-
-        <div class="about-left">
-
-          <span class="about-kicker">
-            EXPERIÊNCIA QUE GERA RESULTADO.
-          </span>
-
-          <h2>
-            + de 10 <br> anos<br>
-            contando<br>
-            histórias.
-          </h2>
-
-        </div>
-
-        <div class="about-center">
-
-          <img src="img/cadeirafukuifilm2.webp" alt="FUKUIFILM" loading="lazy">
-
-        </div>
-
-        <div class="about-right">
-
-          <div class="stat-item">
-            <h3>+240</h3>
-            <p>projetos realizados</p>
-          </div>
-
-          <div class="stat-item">
-            <h3>+50</h3>
-            <p>marcas atendidas</p>
-          </div>
-
-          <div class="stat-item">
-            <h3>+ milhões</h3>
-            <p>de pessoas impactadas</p>
-          </div>
-
-          <div class="stat-item">
-            <h3>+ criatividade</h3>
-            <p>em cada detalhe</p>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
     <!-- PROJETOS -->
     <section id="projetos" class="featured-projects">
 
       <div class="projects-header">
 
+        <div class="projects-heading-top">
+          <span class="projects-eyebrow">NOSSO PORTFÓLIO</span>
+          <span class="projects-index">01 — 04 / PROJETOS SELECIONADOS</span>
+        </div>
+
         <h2 class="projects-heading">
-          <span>PROJETOS EM</span>
-          <span>DESTAQUE</span>
+          Histórias que ganham<br>
+          <span class="projects-last-line">forma<span class="title-dot">.</span></span>
         </h2>
 
       </div>
 
       <div class="projects-gallery">
 
-        <img src="img/growthlogo.webp" alt="" loading="lazy">
-        <img src="img/ozoncare4.webp" alt="" loading="lazy">
-        <img src="img/foto4.webp" alt="" loading="lazy">
-        <img src="img/delassummitpreenchimento.webp" alt="" loading="lazy">
+        <a href="projetos.html" class="project-feature project-feature-main">
+          <img src="img/growthlogo.webp" alt="Projeto Growth" loading="lazy">
+          <div class="project-feature-overlay">
+            <span>01 / AUDIOVISUAL</span>
+            <h3>GROWTH</h3>
+            <span class="project-feature-arrow">↗</span>
+          </div>
+        </a>
+
+        <a href="projetos.html" class="project-feature">
+          <img src="img/ozoncare4.webp" alt="Projeto Ozoncare" loading="lazy">
+          <div class="project-feature-overlay">
+            <span>02 / CAMPANHA</span>
+            <h3>OZONCARE</h3>
+            <span class="project-feature-arrow">↗</span>
+          </div>
+        </a>
+
+        <a href="projetos.html" class="project-feature">
+          <img src="img/foto4.webp" alt="Projeto Seu Conde" loading="lazy">
+          <div class="project-feature-overlay">
+            <span>03 / FOTOGRAFIA</span>
+            <h3>SEU CONDE</h3>
+            <span class="project-feature-arrow">↗</span>
+          </div>
+        </a>
+
+        <a href="projetos.html" class="project-feature">
+          <img src="img/delassummitpreenchimento.webp" alt="Projeto Delas Summit" loading="lazy">
+          <div class="project-feature-overlay">
+            <span>04 / EVENTO</span>
+            <h3>DELAS SUMMIT</h3>
+            <span class="project-feature-arrow">↗</span>
+          </div>
+        </a>
+
+        <a href="projetos.html" class="project-feature">
+          <img src="img/delassummitpreenchimento.webp" alt="Projeto Delas Summit" loading="lazy">
+          <div class="project-feature-overlay">
+            <span>04 / EVENTO</span>
+            <h3>DELAS SUMMIT</h3>
+            <span class="project-feature-arrow">↗</span>
+          </div>
+        </a>
 
       </div>
 
       <div class="projects-footer">
 
+        <span>PROJETOS FUKUIFILM</span>
+
         <a href="projetos.html" class="projects-link">
-          Ver projetos em destaque
-          <span class="arrow">→</span>
+          EXPLORAR
+          <span>↗</span>
         </a>
 
       </div>
@@ -253,6 +246,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
       <div class="services-heading">
         <h2 class="services-title">O QUE FAZEMOS</h2>
+
         <div class="services-tabs" role="tablist" aria-label="Nossos serviços">
           <button class="service-tab is-active" type="button" role="tab" aria-selected="true" data-service="0"><span>01</span> FILMES</button>
           <button class="service-tab" type="button" role="tab" aria-selected="false" data-service="1"><span>02</span> FOTOGRAFIA</button>
@@ -262,6 +256,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       </div>
 
       <div class="services-grid">
+
         <article class="service-card is-active" data-service-card="0" data-expandable="true">
           <img src="img/etrevertical.webp" alt="Filmes" loading="lazy">
           <div class="service-overlay">
@@ -273,21 +268,339 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
         <article class="service-card" data-service-card="1" data-expandable="false">
           <img src="img/fotografia.webp" alt="Fotografia" loading="lazy">
-          <div class="service-overlay"><div class="service-label"><span>02</span><h3>FOTOGRAFIA</h3></div><p>Ensaios, produtos, gastronomia e conteúdo visual de alto impacto.</p></div>
+          <div class="service-overlay">
+            <div class="service-label"><span>02</span><h3>FOTOGRAFIA</h3></div>
+            <p>Ensaios, produtos, gastronomia e conteúdo visual de alto impacto.</p>
+          </div>
         </article>
 
         <article class="service-card" data-service-card="2" data-expandable="true">
-          <img src="img/ozoncarevertical.jpg" alt="Campanhas" loading="lazy">
-          <div class="service-overlay"><div class="service-label"><span>03</span><h3>CAMPANHAS</h3></div><p>Estratégias visuais que fortalecem presença e posicionamento.</p></div>
+          <img src="img/ozoncarevertical.webp" alt="Campanhas" loading="lazy">
+          <div class="service-overlay">
+            <div class="service-label"><span>03</span><h3>CAMPANHAS</h3></div>
+            <p>Estratégias visuais que fortalecem presença e posicionamento.</p>
+          </div>
         </article>
 
         <article class="service-card" data-service-card="3" data-expandable="true">
           <img src="img/duorum.webp" alt="Direção visual" loading="lazy">
-          <div class="service-overlay"><div class="service-label"><span>04</span><h3>DIREÇÃO VISUAL</h3></div><p>Construção estética e narrativa para marcas memoráveis.</p></div>
+          <div class="service-overlay">
+            <div class="service-label"><span>04</span><h3>DIREÇÃO VISUAL</h3></div>
+            <p>Construção estética e narrativa para marcas memoráveis.</p>
+          </div>
         </article>
+
       </div>
 
     </section>
+
+    <!-- SOBRE -->
+    <section id="sobre" class="about-section about-page">
+
+      <div class="about-container">
+
+        <div class="about-left">
+          <span class="about-kicker">
+            EXPERIÊNCIA QUE GERA RESULTADO.
+          </span>
+
+          <h2>
+            + de 10 <br> anos<br>
+            contando<br>
+            histórias.
+          </h2>
+        </div>
+
+        <div class="about-center">
+          <img src="img/cadeirafukuifilm2.webp" alt="FUKUIFILM" loading="lazy">
+        </div>
+
+        <div class="about-right">
+
+          <div class="stat-item">
+            <h3>+240</h3>
+            <p>projetos realizados</p>
+          </div>
+
+          <div class="stat-item">
+            <h3>+50</h3>
+            <p>marcas atendidas</p>
+          </div>
+
+          <div class="stat-item">
+            <h3>+ milhões</h3>
+            <p>de pessoas impactadas</p>
+          </div>
+
+          <div class="stat-item">
+            <h3>+ criatividade</h3>
+            <p>em cada detalhe</p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="about-intro">
+
+        <div class="about-intro-header">
+
+          <span class="about-eyebrow">
+            CONHEÇA A FUKUIFILM — NOSSA ESSÊNCIA
+          </span>
+
+          <h2>
+            Imagens que<br>
+            contam histórias<span>.</span>
+          </h2>
+
+        </div>
+
+        <div class="about-intro-content">
+
+          <div class="about-description">
+
+            <p>A <strong>FUKUIFILM</strong> é uma produtora audiovisual
+              que transforma ideias em imagens e histórias.
+              Criamos filmes, campanhas publicitárias, videoclipes e conteúdos para redes sociais e marcas.</p>
+
+            <p>Trabalhamos com empresas de diferentes segmentos de restaurantes a negócios de diversas áreas para desenvolver conteúdos que comuniquem com clareza, criatividade e personalidade. Do planejamento à produção, ajudamos cada cliente a contar sua história e apresentar seu trabalho por meio do audiovisual.</p>
+
+          </div>
+        </div>
+
+      </div>
+
+      <div class="about-team">
+
+        <!-- CABEÇALHO -->
+        <div class="team-header">
+
+          <div>
+
+            <span class="about-eyebrow">
+              POR TRÁS DAS CÂMERAS
+            </span>
+
+            <h2>
+              Quem faz<br>
+              a FUKUI<span>.</span>
+            </h2>
+
+          </div>
+
+          <p>
+            Cada projeto nasce de diferentes olhares,
+            ideias e habilidades. Conheça as pessoas
+            que transformam criatividade em realidade.
+          </p>
+
+        </div>
+
+        <!-- INTEGRANTES DA EQUIPE -->
+        <div class="team-grid">
+
+          <!-- INTEGRANTE 01 -->
+          <article class="team-card">
+
+            <button
+              class="team-photo team-photo-button"
+              type="button"
+              data-name="Yohana Fukui"
+              data-role="DIRETORA CRIATIVA"
+              data-description="Na FUKUI FILM, sou diretora criativa e trabalho com audiovisual. Crio filmes, campanhas publicitárias, videoclipes e conteúdos para marcas e empresas de diferentes áreas.&#10;
+              Sou curiosa e observadora. Gosto de ouvir as pessoas, perceber os detalhes e entender o que torna cada história especial. Levo esse olhar para os projetos que dirijo, transformando ideias em imagens que despertam sentimentos, criam conexões e ficam na memória.&#10;
+              Acredito que uma imagem pode ir além de mostrar. Ela pode revelar verdades, tocar alguém e mudar a forma como olhamos para uma história. É essa possibilidade que torna cada produção tão significativa para mim.&#10;
+              Instagram: @fleurnuitt"
+            >
+
+              <img
+                src="img/yohana.webp"
+                alt="Yohana Fukui"
+                loading="lazy"
+              >
+
+              <span>01 / FUKUIFILM</span>
+
+            </button>
+
+            <div class="team-info">
+
+              <span class="team-role">
+                DIRETORA CRIATIVA
+              </span>
+
+              <h3>Yohana Fukui</h3>
+
+              <p>
+                Ideias que encontram sua forma em imagem e narrativa.
+              </p>
+
+              <button
+              class="team-more-button"
+              type="button"
+              onclick="this.closest('.team-card').querySelector('.team-photo-button').click()">
+              CLIQUE PARA SABER MAIS <span>↗</span>
+            </button>
+
+            </div>
+
+          </article>
+
+          <!-- INTEGRANTE 02 -->
+          <article class="team-card">
+
+            <button
+              class="team-photo team-photo-button"
+              type="button"
+              data-name="Mariana Moreira"
+              data-role="SOCIAL MEDIA &amp; GESTÃO DE MÍDIAS"
+              data-description="Atuo com gestão de mídias sociais, desenvolvendo estratégias de comunicação e conteúdo para diferentes marcas e empresas.&#10;
+              Na FUKUI FILM, sou responsável pela gestão das redes sociais, pelo planejamento de conteúdo e pelas estratégias de comunicação digital. Também trabalho com tráfego pago, criação de designs e edição básica de vídeos.&#10;
+              Atualmente, curso Psicologia. Essa formação amplia meu olhar sobre a comunicação e as relações humanas, ajudando-me a compreender diferentes públicos e a criar formas mais próximas e estratégicas de conexão. Para mim, comunicar uma marca também é entender o que ela deseja transmitir e como pode se relacionar com as pessoas.&#10;
+              Instagram: @mamoreir_ "
+            >
+
+              <img
+                src="img/mariana.webp"
+                alt="Integrante da equipe FUKUIFILM"
+                loading="lazy"
+              >
+
+              <span>02 / FUKUIFILM</span>
+
+            </button>
+
+            <div class="team-info">
+
+              <span class="team-role">
+                SOCIAL MEDIA &amp; GESTÃO DE MIDIAS
+              </span>
+
+              <h3>Mariana Moreira</h3>
+
+              <p>
+                Organização e cuidado em cada etapa da produção.
+              </p>
+
+              <button
+              class="team-more-button"
+              type="button"
+              onclick="this.closest('.team-card').querySelector('.team-photo-button').click()">
+              CLIQUE PARA SABER MAIS <span>↗</span>
+            </button>
+
+            </div>
+
+          </article>
+
+          <!-- INTEGRANTE 03 -->
+          <article class="team-card">
+
+            <button
+              class="team-photo team-photo-button"
+              type="button"
+              data-name="Lucas Domingues"
+              data-role="DESIGN GRÁFICO"
+              data-description="Atuo há mais de sete anos com comunicação, criando identidades visuais e estratégias de marca. Acredito que uma marca forte nasce da combinação entre clareza, consistência e relevância. Por isso, busco me manter em constante evolução, acompanhando as tendências e aprofundando meu olhar técnico para conduzir cada projeto com intenção.&#10;
+              Para mim, comunicar vai muito além de desenhar um logo. É construir um posicionamento claro e criar conteúdos que expressem a essência da marca e façam sentido para as pessoas.&#10;
+              Instagram: @lucguez"
+            >
+
+              <img
+                src="img/lucas.webp"
+                alt="Integrante da equipe FUKUIFILM"
+                loading="lazy"
+              >
+
+              <span>03 / FUKUIFILM</span>
+
+            </button>
+
+            <div class="team-info">
+
+              <span class="team-role">
+                DESIGN GRÁFICO
+              </span>
+
+              <h3>Lucas Domingues</h3>
+
+              <p>
+                Um olhar atento para construir o ritmo e a atmosfera.
+              </p>
+
+              <button
+              class="team-more-button"
+              type="button"
+              onclick="this.closest('.team-card').querySelector('.team-photo-button').click()">
+              CLIQUE PARA SABER MAIS <span>↗</span>
+            </button>
+
+            </div>
+
+          </article>
+
+        </div>
+
+        <!-- MODAL DA EQUIPE -->
+        <div class="team-modal" id="teamModal" aria-hidden="true">
+
+          <div class="team-modal-backdrop"></div>
+
+          <div
+            class="team-modal-content"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="teamModalName"
+            aria-describedby="teamModalDescription"
+            tabindex="-1"
+          >
+
+            <button
+              class="team-modal-close"
+              type="button"
+              aria-label="Fechar modal"
+            >
+              &times;
+            </button>
+
+            <div class="team-modal-image">
+              <img id="teamModalImage" src="" alt="">
+            </div>
+
+            <div class="team-modal-info">
+
+              <span class="team-modal-eyebrow">
+                EQUIPE FUKUIFILM
+              </span>
+
+              <span class="team-modal-role" id="teamModalRole"></span>
+
+              <h2 id="teamModalName"></h2>
+
+              <div class="team-modal-description" id="teamModalDescription"></div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <div class="about-slogan">
+
+      <p class="slogan-japanese">
+        アーティストの義務は見たすべての真実を描写することです。
+      </p>
+
+      <p class="slogan-translation">
+        É dever do artista retratar toda a verdade que vê.
+      </p>
+
+    </div>
 
   </main>
 
