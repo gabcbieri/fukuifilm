@@ -53,11 +53,15 @@ export const projectGalleryItems = [
         image: "img/camvel.webp",
     },
     {
-        title: "Produção de Conteúdo | Element Fit",
+        title: "Produção de Conteúdo | Elemento Fit",
         image: "img/element-fit-placeholder.webp"
     },
     {
         title: "Produção Audiovisual | Mauna Lani",
         image: "img/mauna-lani-placeholder.webp"
+    },
+    {
+        title: "Startup Summit",
+        image: "img/capastartupsummit.jpg"
     },
 ] satisfies readonly ProjectGalleryItem[];

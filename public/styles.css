@@ -1109,13 +1109,22 @@ button {
     transition: transform .35s ease;
 }
 
+.project-card-placeholder {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    aspect-ratio: 1.4 / 1;
+    color: #777;
+    background: radial-gradient(ellipse at center, #202020 0%, #101010 72%);
+    font-size: 32px;
+}
+
 .project-card:hover img,
 .project-card.is-touch-active img,
 .project-card:focus-visible img {
     transform: scale(1.05);
 }
 
-.project-card:focus,
 .project-card:focus-visible {
     outline: 2px solid #e10613;
     outline-offset: -2px;
@@ -1550,7 +1559,7 @@ body.modal-open {
 
 .project-modal-close:hover {
 
-    background: #b90d18;
+    background: #292929;
 
 }
 
@@ -1959,39 +1968,49 @@ body.modal-open {
     gap: 6px;
 }
 
-.modal-gallery img {
+.modal-gallery img,
+.modal-gallery video {
     border-radius: 6px;
     aspect-ratio: auto;
     height: 100%;
     grid-column: span 3;
+    width: 100%;
+    object-fit: cover;
+    background: #000;
 }
 
-.modal-gallery img:nth-child(1) {
+.modal-gallery img:nth-child(1),
+.modal-gallery video:nth-child(1) {
     grid-column: span 5;
     grid-row: span 2;
 }
 
-.modal-gallery img:nth-child(2) {
+.modal-gallery img:nth-child(2),
+.modal-gallery video:nth-child(2) {
     grid-column: span 4;
     grid-row: span 2;
 }
 
-.modal-gallery img:nth-child(3) {
+.modal-gallery img:nth-child(3),
+.modal-gallery video:nth-child(3) {
     grid-column: span 3;
     grid-row: span 2;
 }
 
-.modal-gallery img:nth-child(4) {
+.modal-gallery img:nth-child(4),
+.modal-gallery video:nth-child(4) {
     grid-column: span 3;
     grid-row: span 2;
 }
 
-.modal-gallery img:nth-child(5) {
+.modal-gallery img:nth-child(5),
+.modal-gallery video:nth-child(5) {
     grid-column: span 6;
     grid-row: span 2;
 }
 
-.modal-gallery img:nth-child(6) {
+.modal-gallery img:nth-child(6),
+.modal-gallery video:nth-child(6) {
     grid-column: span 3;
     grid-row: span 2;
 }
@@ -2012,13 +2031,14 @@ body.modal-open {
 
 .modal-project-video-block {
     display: grid;
-    gap: 12px;
+    gap: 8px;
 }
 
 .modal-project-video-block h4 {
     margin: 0;
     color: #fff;
-    font-size: 18px;
+    font-size: 13px;
+    font-weight: 700;
 }
 
 .modal-project-video-block p {
@@ -2114,6 +2134,18 @@ body.modal-open {
     height: 106px;
     object-fit: cover;
     border-radius: 5px;
+}
+
+.modal-behind-gallery video {
+    width: 100%;
+    height: 106px;
+    object-fit: cover;
+    border-radius: 5px;
+    background: #000;
+}
+
+.modal-bottom-grid--without-behind {
+    grid-template-columns: 1fr;
 }
 
 .modal-results-section {

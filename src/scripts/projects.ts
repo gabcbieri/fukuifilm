@@ -38,7 +38,8 @@ function renderProject(index) {
 
     projectImages.forEach((image) => {
         if (!image) return;
-        image.src = project.image;
+        image.style.visibility = project.image ? "" : "hidden";
+        if (project.image) image.src = project.image;
         image.alt = project.title;
     });
 
@@ -415,9 +416,10 @@ const projectDetails = [
     
     ["Camvel Porto Belo", "Vídeo promocional", "Camvel", "2025", "Produção audiovisual · Drone · Edição", "Um vídeo promocional que apresenta o empreendimento com ritmo, sofisticação e foco na experiência.", "img/camvel.webp", ["img/camvel.webp", "img/foto3.webp", "img/foto2.webp", "img/550A4842.webp"], "Filme promocional · Drone · Reels"],
 
-    ["Produção de Conteúdo | Element Fit", "Produção de conteúdo", "Element Fit", "2026", "Fotografia · Produção audiovisual · Direção criativa", "Produção de fotos e vídeos para a Element Fit, criando conteúdos visuais que apresentam a marca e acompanham seu universo de treino, movimento e bem-estar.", "img/element-fit-placeholder.webp", ["img/element-fit-placeholder.webp", "img/element-fit-placeholder.webp", "img/element-fit-placeholder.webp", "img/element-fit-placeholder.webp"], "Fotografias · Vídeos · Conteúdo para marca"],
+    ["Produção de Conteúdo | Elemento Fit", "Produção de conteúdo", "Elemento Fit", "2026", "Fotografia · Produção audiovisual · Direção criativa", "Produção de fotos e vídeos para a Element Fit, criando conteúdos visuais que apresentam a marca e acompanham seu universo de treino, movimento e bem-estar.", "img/element-fit-placeholder.webp", [], "Fotografias · Vídeos · Conteúdo para marca"],
 
-    ["Produção Audiovisual | Mauna Lani", "Produção audiovisual e redes sociais", "Mauna Lani", "2026", "Produção audiovisual · Fotografia · Conteúdo para redes sociais", "Produção audiovisual e conteúdo para redes sociais da Mauna Lani, apresentando a pousada e sua atmosfera por meio de vídeos, imagens e ações no perfil.", "img/mauna-lani-placeholder.webp", ["img/mauna-lani-placeholder.webp", "img/mauna-lani-placeholder.webp", "img/mauna-lani-placeholder.webp", "img/mauna-lani-placeholder.webp"], "Vídeos · Fotografias · Conteúdo para redes sociais"]
+    ["Produção Audiovisual | Mauna Lani", "Produção audiovisual e redes sociais", "Mauna Lani", "2026", "Produção audiovisual · Fotografia · Conteúdo para redes sociais", "Produção audiovisual e conteúdo para redes sociais da Mauna Lani, apresentando a pousada e sua atmosfera por meio de vídeos, imagens e ações no perfil.", "img/mauna-lani-placeholder.webp", ["img/mauna-lani-placeholder.webp", "img/mauna-lani-placeholder.webp", "img/mauna-lani-placeholder.webp", "img/mauna-lani-placeholder.webp"], "Vídeos · Fotografias · Conteúdo para redes sociais"],
+    ["Cobertura Audiovisual | Startup Summit", "Cobertura audiovisual", "Green Films", "—", "Cobertura audiovisual · Conteúdo em tempo real", "Cobertura audiovisual do Startup Summit realizada ao longo de três dias. A convite da Green Films, a FukuiFilm integrou a equipe responsável por registrar o evento e produzir conteúdo em tempo real.", "img/capastartupsummit.jpg", [], "Cobertura de três dias · Conteúdo em tempo real"]
 ].map(([title, category, client, year, services, summary, cover, gallery, deliveries]) => ({ title, category, client, year, services, summary, cover, gallery, deliveries, description: `<p>${summary}</p><p>O trabalho foi desenvolvido com atenção aos detalhes e uma direção visual alinhada aos objetivos da marca, criando materiais versáteis para a campanha e os canais digitais.</p><p>Da concepção à entrega, cada escolha foi pensada para gerar identificação e uma experiência visual consistente.</p>`, results: ["Campanha completa alinhada à identidade da marca", "Conteúdos otimizados para redes sociais", "Fortalecimento da presença e posicionamento", "Materiais prontos para diferentes pontos de contato"] }));
 
 Object.assign(projectDetails[0], {
@@ -429,7 +431,7 @@ Object.assign(projectDetails[0], {
         <p>Para isso, produzimos uma série de retratos corporativos seguindo um padrão visual consistente, proporcionando imagens de alta qualidade para uso nos perfis profissionais e na comunicação institucional da empresa.</p>
         <p>Mais do que fotografias, o projeto reforçou a identidade da Growth, valorizou as pessoas que fazem parte da equipe e contribuiu para uma presença digital mais forte e alinhada aos valores da marca.</p>
     `,
-    video: "videos/growth.mp4",
+    video: "videos/otimizados/growth.mp4",
     videoTitle: "Making Of da Produção",
     videoDescription: "Um registro dos bastidores da produção, mostrando parte da estrutura, direção e organização envolvidas na criação dos retratos corporativos da equipe.",
     results: [
@@ -443,6 +445,13 @@ Object.assign(projectDetails[0], {
 
 
 Object.assign(projectDetails[12], {
+    videos: [
+        { src: "videos/otimizados/academianovaelementofit.mp4", title: "Academia Nova Element Fit" },
+        { src: "videos/otimizados/algunsplanoselementofit.mp4", title: "Alguns Planos Element Fit" },
+        { src: "videos/otimizados/novaoportunidadeelementofit.mp4", title: "Nova Oportunidade Element Fit" },
+        { src: "videos/otimizados/planoelementofit.mp4", title: "Plano Element Fit" },
+        { src: "videos/otimizados/treinargluetoselementofit.mp4", title: "Treinar Glúteos Element Fit" }
+    ],
     description: `
         <p>A FukuiFilm realiza produções audiovisuais e fotográficas para a Element Fit, desenvolvendo conteúdos que valorizam a experiência da marca e traduzem sua energia em imagens.</p>
         <p>Entre vídeos e fotografias, cada produção explora diferentes aspectos da Element Fit e amplia as possibilidades de comunicação visual da marca.</p>
@@ -454,7 +463,7 @@ Object.assign(projectDetails[12], {
         },
         {
             title: "Energia em destaque",
-            description: "Imagens que acompanham o movimento e a atmosfera da marca."
+            description: "Imagens que acompanham o movimento e a axtmosfera da marca."
         },
         {
             title: "Identidade visual",
@@ -464,6 +473,20 @@ Object.assign(projectDetails[12], {
 });
 
 Object.assign(projectDetails[13], {
+    gallery: [
+    "img/otimizadas/maunalani/1maunalani.webp",
+    "img/otimizadas/maunalani/2maunalani.webp",
+    "img/otimizadas/maunalani/3maunalani.webp",
+    "img/otimizadas/maunalani/4maunalani.webp",
+    "img/otimizadas/maunalani/5maunalani.webp",
+    "img/otimizadas/maunalani/6maunalani.webp",
+    "img/7maunalani.jpg"
+],
+    videos: [
+        { src: "videos/otimizados/dentroeforamaunalani.mp4", title: "Dentro e Fora — Mauna Lani" },
+        { src: "videos/otimizados/feriasmaunalani.mp4", title: "Férias — Mauna Lani" },
+        { src: "videos/otimizados/v1maunalani.mp4", title: "Vídeo 1 — Mauna Lani" }
+    ],
     description: `
         <p>A FukuiFilm produz materiais audiovisuais para a Mauna Lani e desenvolve conteúdos e ações para o perfil da pousada nas redes sociais.</p>
         <p>Os vídeos e as imagens apresentam os espaços e detalhes que fazem parte da experiência de se hospedar na Mauna Lani, aproximando o público do local e de sua proposta.</p>
@@ -484,6 +507,28 @@ Object.assign(projectDetails[13], {
     ]
 });
 
+Object.assign(projectDetails[14], {
+    videos: [
+        { src: "videos/otimizados/dia1startupsummit.mp4", title: "Dia 1 — Startup Summit" },
+        { src: "videos/otimizados/dia2startupsummit.mp4", title: "Dia 2 — Startup Summit" },
+        { src: "videos/otimizados/dia3startupsummit.mp4", title: "Dia 3 — Startup Summit" }
+    ],
+    description: `
+        <p>Durante os três dias de evento, a FukuiFilm trabalhou junto à Green Films na cobertura audiovisual do Startup Summit. A equipe acompanhou a programação e registrou os momentos do encontro enquanto ele acontecia.</p>
+        <p>A cobertura em tempo real permitiu compartilhar o que acontecia no evento durante sua realização, levando a experiência do Startup Summit também a quem acompanhava de fora.</p>
+    `,
+    results: [
+        {
+            title: "Três dias de cobertura",
+            description: "Acompanhamento audiovisual do Startup Summit durante toda a programação."
+        },
+        {
+            title: "Conteúdo em tempo real",
+            description: "Registros produzidos para compartilhar a experiência do evento enquanto acontecia."
+        }
+    ]
+});
+
 
 const modal = document.querySelector(".project-modal");
 const openButton = document.querySelector("#open-project-modal");
@@ -492,6 +537,21 @@ const modalContainer = document.querySelector(".project-modal-container");
 const projectCards = document.querySelectorAll(".projects-grid-custom .project-card");
 let lastFocusedProjectTrigger = null;
 const makeImage = (src, alt) => { const image = document.createElement("img"); image.src = src; image.alt = alt; image.loading = "lazy"; return image; };
+const isBehindMedia = (item) => {
+    const src = typeof item === "string" ? item : item?.src;
+    return typeof src === "string" && /[^/\\]*bastidores\.(?:jpe?g|png|webp|gif|mp4|webm|mov|m4v)$/i.test(src);
+};
+const makeGalleryMedia = (item, project, index) => {
+    if (typeof item === "string") return makeImage(item, project.title);
+    const video = document.createElement("video");
+    video.src = item.src;
+    video.title = item.title || `Vídeo ${index + 1} — ${project.title}`;
+    video.controls = true;
+    video.preload = "metadata";
+    video.playsInline = true;
+    video.setAttribute("aria-label", video.title);
+    return video;
+};
 function renderProjectModal(index) {
     currentProjectIndex = (index + projectDetails.length) % projectDetails.length; currentProjectId = currentProjectIndex + 1;
     const project = projectDetails[currentProjectIndex];
@@ -499,14 +559,63 @@ function renderProjectModal(index) {
     const modalEyebrow = projectTitleParts.length ? projectHeading : project.category;
     const modalTitle = projectTitleParts.length ? projectTitleParts.join(" | ") : project.title;
     modalContainer.classList.toggle("growth-project-modal", currentProjectIndex === 0);
-    document.querySelector(".modal-video-section > h3").textContent = project.video ? "Vídeo do Projeto" : "Vídeos";
-    document.querySelector(".modal-results-section > h3").textContent = project.video ? "Impacto do Projeto" : "Resultados";
-    [["#modal-cover", "src", project.cover], ["#modal-cover", "alt", project.title], ["#modal-title", "textContent", modalTitle], ["#modal-category", "textContent", modalEyebrow], ["#modal-summary", "textContent", project.summary], ["#modal-type", "textContent", project.category], ["#modal-client", "textContent", project.client], ["#modal-year", "textContent", project.year], ["#modal-services", "textContent", project.services], ["#modal-deliveries", "textContent", project.deliveries]].forEach(([selector, property, value]) => document.querySelector(selector)[property] = value);
+    const hasProjectVideos = Boolean(project.video || project.videos?.length);
+    document.querySelector(".modal-video-section > h3").textContent = "Vídeos";
+    document.querySelector(".modal-results-section > h3").textContent = hasProjectVideos ? "Impacto do Projeto" : "Resultados";
+    const coverImage = document.querySelector("#modal-cover");
+    coverImage.style.display = project.cover ? "" : "none";
+    if (project.cover) coverImage.src = project.cover;
+    else coverImage.removeAttribute("src");
+    document.querySelector("#modal-watch").style.display = project.video || project.videos?.length ? "" : "none";
+    [["#modal-cover", "alt", project.title], ["#modal-title", "textContent", modalTitle], ["#modal-category", "textContent", modalEyebrow], ["#modal-summary", "textContent", project.summary], ["#modal-type", "textContent", project.category], ["#modal-client", "textContent", project.client], ["#modal-year", "textContent", project.year], ["#modal-services", "textContent", project.services], ["#modal-deliveries", "textContent", project.deliveries]].forEach(([selector, property, value]) => document.querySelector(selector)[property] = value);
     document.querySelector("#modal-description").innerHTML = project.description;
-    document.querySelector("#modal-gallery").replaceChildren(...project.gallery.concat(project.gallery.slice(0, 2)).map(src => makeImage(src, project.title)));
-    document.querySelector("#modal-behind").replaceChildren(...project.gallery.slice(1, 4).map(src => makeImage(src, `Bastidores — ${project.title}`)));
+    const hasGalleryImages = project.gallery.some(item => typeof item === "string");
+    const galleryItems = project.gallery.every(item => typeof item === "string") && project.gallery.length < 6
+        ? project.gallery.concat(project.gallery.slice(0, 6 - project.gallery.length))
+        : project.gallery;
+    document.querySelector(".modal-gallery-section").style.display = hasGalleryImages ? "" : "none";
+    document.querySelector("#modal-gallery").replaceChildren(...galleryItems.map((item, itemIndex) => makeGalleryMedia(item, project, itemIndex)));
+    const behindItems = [
+        ...project.gallery,
+        ...(project.videos || []),
+        ...(project.video ? [project.video] : [])
+    ].filter(isBehindMedia);
+    const behindSection = document.querySelector(".modal-behind-section");
+    const bottomGrid = document.querySelector(".modal-bottom-grid");
+    behindSection.style.display = behindItems.length ? "" : "none";
+    bottomGrid.classList.toggle("modal-bottom-grid--without-behind", behindItems.length === 0);
+    document.querySelector("#modal-behind").replaceChildren(...behindItems.map((item, itemIndex) => {
+        const src = typeof item === "string" ? item : item.src;
+        if (/\.(?:mp4|webm|mov|m4v)$/i.test(src)) {
+            const video = document.createElement("video");
+            video.src = src;
+            video.controls = true;
+            video.preload = "metadata";
+            video.playsInline = true;
+            video.setAttribute("aria-label", `Bastidores ${itemIndex + 1} — ${project.title}`);
+            return video;
+        }
+        return makeImage(src, `Bastidores ${itemIndex + 1} — ${project.title}`);
+    }));
     const videosGrid = document.querySelector("#modal-videos-grid");
-    if (project.video) {
+    const videoSection = document.querySelector(".modal-video-section");
+    const hasVideoSectionContent = Boolean(project.video || project.videos?.length || project.gallery.some(item => typeof item === "string"));
+    videoSection.style.display = hasVideoSectionContent ? "" : "none";
+    if (project.videos?.length) {
+        videosGrid.replaceChildren(...project.videos.map(item => {
+            const video = document.createElement("video");
+            video.className = "modal-project-video";
+            video.src = item.src;
+            video.controls = true;
+            video.preload = "metadata";
+            video.playsInline = true;
+            video.setAttribute("aria-label", item.title);
+            const videoBlock = document.createElement("article");
+            videoBlock.className = "modal-project-video-block";
+            videoBlock.append(video);
+            return videoBlock;
+        }));
+    } else if (project.video) {
         const video = document.createElement("video");
         video.className = "modal-project-video";
         video.src = project.video;
@@ -517,21 +626,27 @@ function renderProjectModal(index) {
         video.setAttribute("aria-label", `Vídeo — ${project.title}`);
         const videoBlock = document.createElement("article");
         videoBlock.className = "modal-project-video-block";
-        const videoTitle = document.createElement("h4");
-        videoTitle.textContent = project.videoTitle;
         const videoDescription = document.createElement("p");
         videoDescription.textContent = project.videoDescription;
-        videoBlock.append(videoTitle, videoDescription, video);
+        videoBlock.append(video, videoDescription);
         videosGrid.replaceChildren(videoBlock);
     } else {
-        videosGrid.replaceChildren(...project.gallery.slice(0, 3).map((src, index) => { const card = document.createElement("article"); card.className = "modal-video-card"; card.append(makeImage(src, `Vídeo ${index + 1} — ${project.title}`)); card.insertAdjacentHTML("beforeend", `<span class="modal-video-play"><i class="fa-solid fa-play"></i></span><strong>${["Filme principal", "Versão para redes", "Bastidores"][index]}</strong><small>${["Campanha completa", "Vídeo vertical · 9:16", "Making of da produção"][index]}</small>`); return card; }));
+        const galleryImages = project.gallery.filter(item => typeof item === "string");
+        videosGrid.replaceChildren(...galleryImages.slice(0, 3).map((src, index) => { const card = document.createElement("article"); card.className = "modal-video-card"; card.append(makeImage(src, `Vídeo ${index + 1} — ${project.title}`)); card.insertAdjacentHTML("beforeend", `<span class="modal-video-play"><i class="fa-solid fa-play"></i></span><small>${["Campanha completa", "Vídeo vertical · 9:16", "Making of da produção"][index]}</small>`); return card; }));
     }
     document.querySelector("#modal-results").replaceChildren(...project.results.map(item => { const li = document.createElement("li"); const content = typeof item === "string" ? `<span>${item}</span>` : `<span><strong>${item.title}</strong><small>${item.description}</small></span>`; li.innerHTML = `<i class="fa-regular fa-circle-check"></i>${content}`; return li; }));
     renderProject(currentProjectIndex); if (modalContainer) modalContainer.scrollTop = 0;
 }
 function openProjectModal() { lastFocusedProjectTrigger = document.activeElement; renderProjectModal(currentProjectIndex); modal.classList.add("active"); modal.setAttribute("aria-hidden", "false"); document.body.classList.add("modal-open"); closeButton.focus(); }
-function closeProjectModal() { const video = modal.querySelector(".modal-project-video"); if (video) { video.pause(); video.currentTime = 0; } modal.classList.remove("active"); modal.setAttribute("aria-hidden", "true"); document.body.classList.remove("modal-open"); if (lastFocusedProjectTrigger?.focus) lastFocusedProjectTrigger.focus(); }
+function closeProjectModal() { modal.querySelectorAll("video").forEach(video => { video.pause(); video.currentTime = 0; }); modal.classList.remove("active"); modal.setAttribute("aria-hidden", "true"); document.body.classList.remove("modal-open"); if (lastFocusedProjectTrigger?.focus) lastFocusedProjectTrigger.focus(); }
 if (modal && closeButton) {
+    modal.addEventListener("play", event => {
+        const playingVideo = event.target;
+        if (!(playingVideo instanceof HTMLVideoElement)) return;
+        modal.querySelectorAll("video").forEach(video => {
+            if (video !== playingVideo) video.pause();
+        });
+    }, true);
     if (openButton) openButton.addEventListener("click", openProjectModal);
     projectCards.forEach(card => card.addEventListener("click", () => {
         currentProjectIndex = Number(card.dataset.project) - 1;
