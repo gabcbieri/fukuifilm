@@ -1,6 +1,4 @@
-/* =========================
-   RESET
-========================= */
+
 
 * {
     margin: 0;
@@ -34,9 +32,7 @@ button {
     font-family: inherit;
 }
 
-/* =========================
-   MENU
-========================= */
+
 
 .floating-menu {
     position: fixed;
@@ -158,9 +154,7 @@ button {
     font-weight: 700;
 }
 
-/* =========================
-   HERO VIDEO
-========================= */
+
 
 .intro-video {
     position: relative;
@@ -266,9 +260,7 @@ button {
     transform: translateY(-2px);
 }
 
-/* =========================
-   PROJETOS (index)
-========================= */
+
 
 .featured-projects {
     background: #000;
@@ -362,9 +354,7 @@ button {
     transform: translateY(-2px);
 }
 
-/* =========================
-   SOBRE
-========================= */
+
 
 .about-section {
     background: #000;
@@ -464,9 +454,7 @@ button {
     line-height: 1.4;
 }
 
-/* =========================
-   MÉTODO
-========================= */
+
 
 .method-section {
     background: #000;
@@ -480,7 +468,7 @@ button {
     padding: 140px 0 80px;
 }
 
-/* BLOCO ESQUERDO */
+
 
 .method-header {
     background: #000;
@@ -523,7 +511,7 @@ button {
     pointer-events: none;
 }
 
-/* CARD GRANDE */
+
 
 .method-slider {
     position: relative;
@@ -559,7 +547,7 @@ button {
     border-radius: 0;
 }
 
-/* OVERLAY */
+
 
 .method-overlay {
     position: absolute;
@@ -593,9 +581,7 @@ button {
     text-align: left;
 }
 
-/* =========================
-   SETAS DO MÉTODO
-========================= */
+
 
 .method-content {
     display: flex;
@@ -650,9 +636,7 @@ button {
     pointer-events: none;
 }
 
-/* =========================
-   SERVIÇOS
-========================= */
+
 #servicos {
     scroll-margin-top: 80px;
 }
@@ -889,9 +873,7 @@ button {
     transform: translateY(0);
 }
 
-/* =========================
-   FOOTER
-========================= */
+
 
 .site-footer {
     border-top: 1px solid rgba(255, 255, 255, .08);
@@ -905,9 +887,7 @@ button {
     font-size: 13px;
 }
 
-/* =========================
-   PÁGINA PROJETOS
-========================= */
+
 
 #projects-section,
 #films-section {
@@ -1151,9 +1131,7 @@ button {
     text-shadow: 0 2px 10px rgba(0, 0, 0, .8);
 }
 
-/* =========================
-   FILMES
-========================= */
+
 
 .films-section {
     background: #000000;
@@ -1241,7 +1219,7 @@ button {
     transform: scale(1.12);
 }
 
-/* MODAL FILMES */
+
 
 .film-modal {
     position: fixed;
@@ -1468,9 +1446,7 @@ body.modal-open {
     padding: 0;
 }
 
-/* ===========================================
-   MODAL DOS PROJETOS
-=========================================== */
+
 
 .project-modal {
     position: fixed;
@@ -1514,14 +1490,14 @@ body.modal-open {
 
 .project-modal-container {
     -ms-overflow-style: none;
-    /* IE e Edge antigo */
+
     scrollbar-width: none;
-    /* Firefox */
+
 }
 
 .project-modal-container::-webkit-scrollbar {
     display: none;
-    /* Chrome, Edge e Safari */
+
 }
 
 @keyframes modalUp {
@@ -1769,7 +1745,7 @@ body.modal-open {
 
 }
 
-/* Projeto detalhado — composição editorial */
+
 .project-modal {
     padding: 22px;
     background: rgba(0, 0, 0, .92);
@@ -2092,7 +2068,7 @@ body.modal-open {
     background: rgba(255, 255, 255, .16);
 }
 
-/* Distribuição assimétrica — desktop */
+
 
 .modal-gallery img:nth-child(1),
 .modal-gallery video:nth-child(1) {
@@ -2419,10 +2395,7 @@ body.modal-open {
 }
 
 
-/* ==========================================
-   O QUE FAZEMOS — AJUSTES DE DIMENSÃO
-   Preserva o visual e o funcionamento atual
-========================================== */
+
 
 .services-section,
 .services-section * {
@@ -2549,7 +2522,7 @@ body.modal-open {
     overflow-wrap: anywhere;
 }
 
-/* Card em destaque: mantém-se dentro da área dos cards */
+
 .services-section.is-service-expanded .services-grid {
     overflow: hidden;
     isolation: isolate;
@@ -2695,16 +2668,16 @@ body.modal-open {
 }
 
 
-/* SERVIÇOS — INFORMAÇÕES AO PASSAR O MOUSE */
 
-/* Esconde as descrições inicialmente */
+
+
 #servicos .service-overlay p {
     opacity: 0;
     transform: translateY(10px);
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-/* Mostra título, descrição e linha ao passar o mouse */
+
 #servicos .service-card:hover .service-overlay p,
 #servicos .service-card:focus-within .service-overlay p {
     opacity: 1;
@@ -2721,12 +2694,12 @@ body.modal-open {
     opacity: 1;
 }
 
-/* Evita que o card mude de tamanho no hover */
+
 #servicos .service-card:hover {
     transform: none;
 }
 
-/* Em telas sensíveis ao toque, mantém as informações visíveis */
+
 @media (hover: none) {
 
     #servicos .service-overlay p,
@@ -2736,9 +2709,7 @@ body.modal-open {
     }
 }
 
-/* =========================================
-   SOBRE — NOVA APRESENTAÇÃO INSTITUCIONAL
-========================================= */
+
 
 .about-page {
     width: 100%;
@@ -2802,7 +2773,7 @@ body.modal-open {
     color: #fff;
 }
 
-/* GALERIA */
+
 
 .about-gallery {
     display: grid;
@@ -2847,7 +2818,7 @@ body.modal-open {
     grid-column: span 2;
 }
 
-/* NÚMEROS */
+
 
 .about-numbers {
     display: grid;
@@ -2877,7 +2848,7 @@ body.modal-open {
     letter-spacing: .12em;
 }
 
-/* SLOGAN */
+
 
 .about-slogan {
     text-align: center;
@@ -2898,9 +2869,7 @@ body.modal-open {
 }
 
 
-/* =========================================
-   EQUIPE — POR TRÁS DAS HISTÓRIAS
-========================================= */
+
 
 .about-team {
     min-height: 100vh;
@@ -2932,7 +2901,7 @@ body.modal-open {
     margin-bottom: 8px;
 }
 
-/* GRID DA EQUIPE */
+
 
 .team-grid {
     display: grid;
@@ -3008,9 +2977,7 @@ body.modal-open {
 }
 
 
-/* =========================================
-   RESPONSIVIDADE — SOBRE
-========================================= */
+
 
 @media (max-width: 900px) {
 
@@ -3133,9 +3100,7 @@ body.modal-open {
 }
 
 
-/* =========================================
-   SOBRE — ESTRUTURA GERAL
-========================================= */
+
 
 .about-section {
     display: block;
@@ -3145,7 +3110,7 @@ body.modal-open {
     background: #050505;
 }
 
-/* CARD ORIGINAL */
+
 
 .about-section .about-container {
     width: calc(100% - 160px);
@@ -3154,19 +3119,19 @@ body.modal-open {
     box-sizing: border-box;
 }
 
-/* APRESENTAÇÃO */
+
 
 .about-section .about-intro {
     width: 100%;
 }
 
-/* EQUIPE */
+
 
 .about-section .about-team {
     width: 100%;
 }
 
-/* RESPONSIVIDADE DO CARD ORIGINAL */
+
 
 @media (max-width: 900px) {
 
@@ -3252,9 +3217,7 @@ body.modal-open {
 }
 
 
-/* =========================================
-   PROJETOS — VITRINE EDITORIAL
-========================================= */
+
 
 .featured-projects {
     background: #050505;
@@ -3311,7 +3274,7 @@ body.modal-open {
     line-height: 1.7;
 }
 
-/* GALERIA ASSIMÉTRICA */
+
 
 .projects-gallery {
     display: grid;
@@ -3402,7 +3365,7 @@ body.modal-open {
     transform: translateY(0);
 }
 
-/* RODAPÉ DA SEÇÃO */
+
 
 .projects-footer {
     display: flex;
@@ -3453,7 +3416,7 @@ body.modal-open {
     transform: translate(3px, -3px);
 }
 
-/* RESPONSIVIDADE */
+
 
 @media (max-width: 900px) {
 
@@ -3545,7 +3508,7 @@ body.modal-open {
 
 }
 
-/* PONTUAÇÃO VERMELHA — IDENTIDADE FUKUIFILM */
+
 
 .projects-heading .projects-last-line {
     display: inline-block;
@@ -3583,9 +3546,7 @@ body.modal-open {
 }
 
 
-/* =========================
-   TEAM PHOTO BUTTON
-========================= */
+
 
 .team-photo-button {
     width: 100%;
@@ -3643,9 +3604,7 @@ body.modal-open {
 }
 
 
-/* =========================
-   TEAM MODAL
-========================= */
+
 
 .team-modal {
     position: fixed;
@@ -3693,7 +3652,7 @@ body.modal-open {
     transform: translateY(0);
 }
 
-/* IMAGEM */
+
 
 .team-modal-image {
     min-width: 0;
@@ -3707,7 +3666,7 @@ body.modal-open {
     object-fit: cover;
 }
 
-/* INFORMAÇÕES */
+
 
 .team-modal-info {
     min-width: 0;
@@ -3737,7 +3696,7 @@ body.modal-open {
     margin-bottom: 25px;
 }
 
-/* DESCRIÇÃO */
+
 
 .team-modal-description {
     color: #aaa;
@@ -3746,14 +3705,14 @@ body.modal-open {
     white-space: pre-line;
 }
 
-/* TEXTO LONGO: APENAS REDUZ O TAMANHO DA FONTE */
+
 
 .team-modal.is-long-description .team-modal-description {
     font-size: 11px;
     line-height: 1.7;
 }
 
-/* FECHAR */
+
 
 .team-modal-close {
     position: absolute;
@@ -3770,7 +3729,7 @@ body.modal-open {
     cursor: pointer;
 }
 
-/* RESPONSIVO */
+
 
 @media (max-width: 650px) {
     .team-modal {
@@ -3807,7 +3766,7 @@ body.modal-open {
     box-shadow: none;
 }
 
-/* REMOVE QUALQUER EFEITO VERMELHO DAS FOTOS DA EQUIPE */
+
 
 .team-photo-button,
 .team-photo-button:hover,
@@ -3862,7 +3821,7 @@ body.modal-open {
     display: none !important;
 }
 
-/* REMOVE BORDA E EFEITOS DE HOVER DOS CARDS DA EQUIPE */
+
 
 .team-card,
 .team-card:hover,
@@ -3891,7 +3850,7 @@ body.modal-open {
     box-shadow: none !important;
 }
 
-/* TABLETS */
+
 @media (min-width: 651px) and (max-width: 1024px) {
     .team-modal-content {
         grid-template-columns: 40% 60%;
@@ -3910,10 +3869,10 @@ body.modal-open {
     }
 }
 
-/* CELULARES */
+
 @media (max-width: 650px) {
 
-    /* MODAL — CELULAR */
+
     .team-modal {
         padding: 12px;
         align-items: flex-start;
@@ -3963,7 +3922,7 @@ body.modal-open {
 
 @media (max-width: 450px) {
 
-    /* MODAL — CELULAR */
+
     .team-modal {
         padding: 12px;
         align-items: flex-start;
@@ -4059,10 +4018,7 @@ body.modal-open {
     width: 100%;
 }
 
-/* =========================================
-   GALERIA DOS MODAIS — MOSAICO SEM ESPAÇOS
-   SOMENTE DESKTOP
-========================================= */
+
 
 @media (min-width: 768px) {
     .modal-gallery {
@@ -4098,4 +4054,14 @@ body.modal-open {
     .modal-gallery {
         column-count: 2;
     }
+}
+
+
+.diagonal-arrow-icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
+    vertical-align: middle;
+    overflow: visible;
 }

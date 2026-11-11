@@ -1,7 +1,5 @@
 // @ts-nocheck
-/* =========================
-   GALERIA DE PROJETOS
-========================= */
+
 
 import { projectGalleryItems } from "../data/projects";
 
@@ -58,7 +56,6 @@ if (projectShowcase && projectPrevButton && projectNextButton) {
     });
 
     document.addEventListener("keydown", (event) => {
-        // Evita que o carrossel avance junto com a navegação do modal.
         if (document.querySelector(".project-modal.active")) return;
 
         if (event.key === "ArrowLeft") {
@@ -89,9 +86,7 @@ if (projectShowcase && projectPrevButton && projectNextButton) {
     renderProject(0);
 }
 
-/* =========================
-   MODAL FILMES
-========================= */
+
 
 const films = {
 
@@ -217,7 +212,6 @@ if (filmButtons.length && filmModal && filmClose) {
             filmRating.textContent = film.rating;
             filmClassification.textContent = film.classification;
 
-            // FICHA TECNICA — so exibe se o filme tiver esses dados
             const hasTechSheet = !!film.director;
 
             if (hasTechSheet) {
@@ -233,7 +227,6 @@ if (filmButtons.length && filmModal && filmClose) {
             filmLineTech.style.display = hasTechSheet ? "" : "none";
             filmTechBlock.style.display = hasTechSheet ? "" : "none";
 
-            // ASSISTIR — so exibe se houver link de trailer
             const hasTrailer = !!film.trailer;
 
             if (hasTrailer) {
@@ -242,7 +235,6 @@ if (filmButtons.length && filmModal && filmClose) {
 
             filmWatchBlock.style.display = hasTrailer ? "" : "none";
 
-            // FESTIVAIS E EXIBICOES — so exibe se houver essa informacao
             const hasFestivals = !!film.festivals;
 
             if (hasFestivals) {
@@ -251,8 +243,6 @@ if (filmButtons.length && filmModal && filmClose) {
 
             filmFestivalsBlock.style.display = hasFestivals ? "" : "none";
 
-            // Linha e bloco inferior somem por completo se nao houver
-            // nem trailer nem festivais para mostrar
             const showBottomRow = hasTrailer || hasFestivals;
 
             filmLineBottom.style.display = showBottomRow ? "" : "none";
@@ -298,9 +288,7 @@ if (filmButtons.length && filmModal && filmClose) {
 
 }
 
-/* =========================
-   MENU — MOBILE TOGGLE
-========================= */
+
 
 const menu = document.querySelector(".floating-menu");
 const nav = document.getElementById("main-navigation");
@@ -361,11 +349,7 @@ if (menu && nav && toggleBtn) {
     });
 }
 
-/* =========================
-   HOVER -> TOQUE (MOBILE)
-   Ativa estados de :hover (project-card, film-block, service-card,
-   projects-gallery img) atraves de toque em telas sem mouse.
-========================= */
+
 
 (function enableTouchHover() {
 
@@ -895,206 +879,3 @@ if (modal && closeButton) {
         if (event.key === "ArrowRight") renderProjectModal(currentProjectIndex + 1);
     });
 }
-
-/* Legacy project modal implementation kept disabled.
-const legacyProjectDetails = {
-
-    1: {
-
-        title: "Retratos Corporativos | Growth Supplements",
-
-        category: "Retratos Corporativos",
-
-        client: "Growth Supplements",
-
-        year: "2026",
-
-        services: "Direção Criativa • Fotografia Corporativa • Produção",
-
-        description: `
-<p>A Growth Supplements buscava fortalecer sua presença no LinkedIn e incentivar seus colaboradores a representarem a marca de forma mais profissional na plataforma.</p>
-
-<p>Para isso, produzimos uma série de retratos corporativos seguindo um padrão visual consistente, proporcionando imagens de alta qualidade para uso nos perfis profissionais e na comunicação institucional da empresa.</p>
-
-<p>Mais do que fotografias, o projeto reforçou a identidade da Growth, valorizou as pessoas que fazem parte da equipe e contribuiu para uma presença digital mais forte e alinhada aos valores da marca.</p><br>
-
-<h3>Impacto do projeto</h3>
-
-<ul>
-    <li><strong>Presença profissional no LinkedIn</strong><br>Retratos que fortalecem a imagem dos colaboradores na principal rede profissional do mercado.</li>
-
-    <li><strong>Employer Branding</strong><br>Uma comunicação mais humana e alinhada à cultura da empresa.</li>
-
-    <li><strong>Padronização visual</strong><br>Fotografias consistentes que reforçam a identidade da Growth Supplements.</li>
-
-    <li><strong>Valorização da equipe</strong><br>Conteúdo que destaca as pessoas por trás da marca.</li>
-
-    <li><strong>Fortalecimento da marca empregadora</strong><br>Uma empresa forte começa pelas pessoas que a representam.</li>
-</ul>
-`,
-
-        cover: "img/growthlogo.webp",
-
-        gallery: [
-
-            "img/growthlogo.webp",
-            "img/growthlogo.webp",
-            "img/growthlogo.webp",
-            "img/growthlogo.webp",
-            "img/growthlogo.webp",
-            "img/growthlogo.webp"
-
-        ]
-
-    },
-
-    2: {
-
-        title: "Lançamento de Produto | Ozoncare",
-
-        category: "Publicidade",
-
-        client: "Ozoncare",
-
-        year: "2026",
-
-        services: "Vídeo • Foto",
-
-        description:
-            "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-
-        cover: "img/ozoncare4.webp",
-
-        gallery: [
-
-            "img/ozoncare4.webp",
-            "img/ozoncare4.webp",
-            "img/ozoncare4.webp"
-
-        ],
-
-    },
-
-    3: {
-        title: "Fotografia de Cardápio | Seu Conde",
-
-        category: "Fotografia",
-
-        client: "Seu Conde",
-
-        year: "2026",
-
-        services: "Fotografia • Direção • Edição",
-
-        description:
-            "Descrição completa do projeto...",
-
-        cover: "img/foto4.webp",
-
-        gallery: [
-            "img/foto4.webp",
-            "img/foto4.webp",
-            "img/foto4.webp"
-        ],
-    }
-
-    // continue os demais...
-
-}
-
-const modal = document.querySelector(".project-modal");
-
-const openButton =
-    document.querySelector("#open-project-modal");
-
-const closeButton =
-    document.querySelector(".project-modal-close");
-
-openButton.addEventListener("click", () => {
-
-    const project = projectDetails[currentProjectId];
-
-    document.querySelector("#modal-cover").src =
-        project.cover;
-
-    document.querySelector("#modal-title").textContent =
-        project.title;
-
-    document.querySelector("#modal-category").textContent =
-        project.category;
-
-    document.querySelector("#modal-type").textContent =
-        project.category;
-
-    document.querySelector("#modal-client").textContent =
-        project.client;
-
-    document.querySelector("#modal-year").textContent =
-        project.year;
-
-    document.querySelector("#modal-services").textContent =
-        project.services;
-
-    document.querySelector("#modal-description").innerHTML =
-        project.description;
-
-    criarGaleria(project.gallery);
-
-    modal.classList.add("active");
-
-    document.body.style.overflow = "hidden";
-
-});
-
-function criarGaleria(imagens) {
-
-    const gallery =
-        document.querySelector("#modal-gallery");
-
-    gallery.innerHTML = "";
-
-    imagens.forEach(src => {
-
-        gallery.innerHTML += `
-
-            <img src="${src}" alt="">
-
-        `;
-
-    });
-
-}
-
-closeButton.addEventListener("click", () => {
-
-    modal.classList.remove("active");
-
-    document.body.style.overflow = "";
-
-});
-
-modal.addEventListener("click", (e) => {
-
-    if (e.target === modal) {
-
-        modal.classList.remove("active");
-
-        document.body.style.overflow = "";
-
-    }
-
-});
-
-document.addEventListener("keydown", (e) => {
-
-    if (e.key === "Escape") {
-
-        modal.classList.remove("active");
-
-        document.body.style.overflow = "";
-
-    }
-
-});
-
-*/

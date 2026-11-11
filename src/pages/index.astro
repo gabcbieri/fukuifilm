@@ -9,12 +9,12 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
     <div class="menu-contents">
 
-      <!-- LOGO ESQUERDA -->
+
       <a href="index.html" class="menu-brand">
         <img src="img/FUKUIFILM-HORIZONTAL-BRANCO.webp" alt="FUKUIFILM" class="menu-logo" loading="eager" fetchpriority="high">
       </a>
 
-      <!-- MENU CENTRO -->
+
       <ul id="main-navigation">
         <li><a href="#">Início</a></li>
         <li><a href="#sobre">Sobre</a></li>
@@ -29,7 +29,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         </li>
       </ul>
 
-      <!-- DIREITA -->
+
       <div class="menu-right">
 
         <a href="https://www.instagram.com/fukuifilm/" target="_blank" rel="noopener noreferrer" class="menu-instagram">
@@ -53,7 +53,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
   <main>
 
-    <!-- INTRO COM VIDEO -->
+
     <section class="intro-video">
 
       <video autoplay muted loop playsinline preload="metadata">
@@ -92,7 +92,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
     </section>
 
-    <!-- PROJETOS -->
+
     <section id="projetos" class="featured-projects">
 
       <div class="projects-header">
@@ -116,7 +116,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           <div class="project-feature-overlay">
             <span>01 / AUDIOVISUAL</span>
             <h3>GROWTH</h3>
-            <span class="project-feature-arrow">↗</span>
+            <span class="project-feature-arrow"><svg class="diagonal-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <path d="M7 17 17 7M7 7h10v10"/>
+</svg></span>
           </div>
         </a>
 
@@ -125,7 +127,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           <div class="project-feature-overlay">
             <span>02 / CAMPANHA</span>
             <h3>OZONCARE</h3>
-            <span class="project-feature-arrow">↗</span>
+            <span class="project-feature-arrow"><svg class="diagonal-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <path d="M7 17 17 7M7 7h10v10"/>
+</svg></span>
           </div>
         </a>
 
@@ -134,7 +138,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           <div class="project-feature-overlay">
             <span>03 / FOTOGRAFIA</span>
             <h3>SEU CONDE</h3>
-            <span class="project-feature-arrow">↗</span>
+            <span class="project-feature-arrow"><svg class="diagonal-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <path d="M7 17 17 7M7 7h10v10"/>
+</svg></span>
           </div>
         </a>
 
@@ -143,7 +149,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           <div class="project-feature-overlay">
             <span>04 / EVENTO</span>
             <h3>DELAS SUMMIT</h3>
-            <span class="project-feature-arrow">↗</span>
+            <span class="project-feature-arrow"><svg class="diagonal-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <path d="M7 17 17 7M7 7h10v10"/>
+</svg></span>
           </div>
         </a>
 
@@ -152,7 +160,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           <div class="project-feature-overlay">
             <span>04 / PRODUÇÃO</span>
             <h3>CASA INTI CAFÉ</h3>
-            <span class="project-feature-arrow">↗</span>
+            <span class="project-feature-arrow"><svg class="diagonal-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <path d="M7 17 17 7M7 7h10v10"/>
+</svg></span>
           </div>
         </a>
 
@@ -164,14 +174,16 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
         <a href="projetos.html" class="projects-link">
           EXPLORAR
-          <span>↗</span>
+          <span><svg class="diagonal-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <path d="M7 17 17 7M7 7h10v10"/>
+</svg></span>
         </a>
 
       </div>
 
     </section>
 
-    <!-- MÉTODO -->
+
     <section id="metodo" class="method-section">
 
       <div class="method-header">
@@ -241,7 +253,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
     </section>
 
-    <!-- SERVIÇOS -->
+
     <section id="servicos" class="services-section">
 
       <div class="services-heading">
@@ -294,7 +306,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
     </section>
 
-    <!-- SOBRE -->
+
     <section id="sobre" class="about-section about-page">
 
       <div class="about-container">
@@ -373,7 +385,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
       <div class="about-team">
 
-        <!-- CABEÇALHO -->
+
         <div class="team-header">
 
           <div>
@@ -397,10 +409,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
         </div>
 
-        <!-- INTEGRANTES DA EQUIPE -->
+
         <div class="team-grid">
 
-          <!-- INTEGRANTE 01 -->
+
           <article class="team-card">
 
             <button
@@ -440,14 +452,16 @@ import BaseLayout from "../layouts/BaseLayout.astro";
               class="team-more-button"
               type="button"
               onclick="this.closest('.team-card').querySelector('.team-photo-button').click()">
-              CLIQUE PARA SABER MAIS <span>↗</span>
+              CLIQUE PARA SABER MAIS <span><svg class="diagonal-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <path d="M7 17 17 7M7 7h10v10"/>
+</svg></span>
             </button>
 
             </div>
 
           </article>
 
-          <!-- INTEGRANTE 02 -->
+
           <article class="team-card">
 
             <button
@@ -487,14 +501,16 @@ import BaseLayout from "../layouts/BaseLayout.astro";
               class="team-more-button"
               type="button"
               onclick="this.closest('.team-card').querySelector('.team-photo-button').click()">
-              CLIQUE PARA SABER MAIS <span>↗</span>
+              CLIQUE PARA SABER MAIS <span><svg class="diagonal-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <path d="M7 17 17 7M7 7h10v10"/>
+</svg></span>
             </button>
 
             </div>
 
           </article>
 
-          <!-- INTEGRANTE 03 -->
+
           <article class="team-card">
 
             <button
@@ -533,7 +549,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
               class="team-more-button"
               type="button"
               onclick="this.closest('.team-card').querySelector('.team-photo-button').click()">
-              CLIQUE PARA SABER MAIS <span>↗</span>
+              CLIQUE PARA SABER MAIS <span><svg class="diagonal-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <path d="M7 17 17 7M7 7h10v10"/>
+</svg></span>
             </button>
 
             </div>
@@ -542,7 +560,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
         </div>
 
-        <!-- MODAL DA EQUIPE -->
+
         <div class="team-modal" id="teamModal" aria-hidden="true">
 
           <div class="team-modal-backdrop"></div>

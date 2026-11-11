@@ -1,9 +1,7 @@
 // @ts-nocheck
 
 
-/* =========================
-   MENU — MOBILE TOGGLE
-========================= */
+
 
 const nav       = document.getElementById("main-navigation");
 const toggleBtn = document.querySelector(".menu-toggle");
@@ -34,12 +32,10 @@ if (nav && toggleBtn && menu) {
     nav.classList.contains("open") ? closeMobileMenu() : openMobileMenu();
   });
 
-  // Fecha ao clicar em qualquer link
   nav.querySelectorAll("a").forEach(link => {
     link.addEventListener("click", closeMobileMenu);
   });
 
-  // Fecha com Escape
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && nav.classList.contains("open")) {
       closeMobileMenu();
@@ -47,21 +43,17 @@ if (nav && toggleBtn && menu) {
     }
   });
 
-  // Fecha ao clicar fora do menu
-document.addEventListener("pointerdown", (e) => {
-
+  document.addEventListener("pointerdown", (e) => {
     if (!nav.classList.contains("open")) return;
 
     if (
-        !nav.contains(e.target) &&
-        !toggleBtn.contains(e.target)
+      !nav.contains(e.target) &&
+      !toggleBtn.contains(e.target)
     ) {
-        closeMobileMenu();
+      closeMobileMenu();
     }
+  });
 
-});
-
-  // Fecha ao passar para desktop (ex: rotacao de tela)
   window.addEventListener("resize", () => {
     if (window.innerWidth > 1023 && nav.classList.contains("open")) {
       closeMobileMenu();
@@ -70,9 +62,7 @@ document.addEventListener("pointerdown", (e) => {
 }
 
 
-/* =========================
-   METODO SLIDER
-========================= */
+
 
 const methodSlides  = document.querySelectorAll(".method-slide");
 const prevMethodBtn = document.getElementById("prevMethod");
@@ -101,7 +91,6 @@ if (methodSlides.length && prevMethodBtn && nextMethodBtn) {
   prevMethodBtn.addEventListener("click", () => moveMethod(-1));
   nextMethodBtn.addEventListener("click", () => moveMethod(1));
 
-  // Swipe touch
   const methodSlider = document.querySelector(".method-slider");
   if (methodSlider) {
     let touchStartX = 0;
@@ -115,7 +104,6 @@ if (methodSlides.length && prevMethodBtn && nextMethodBtn) {
     }, { passive: true });
   }
 
-  // Teclado (só quando a seção está visível)
   document.addEventListener("keydown", (e) => {
     const section = document.querySelector("#metodo");
     if (!section) return;
@@ -129,9 +117,7 @@ if (methodSlides.length && prevMethodBtn && nextMethodBtn) {
 }
 
 
-/* =========================
-   SERVIÇOS: PAINÉIS EDITORIAIS
-========================= */
+
 
 const serviceTabs = document.querySelectorAll<HTMLButtonElement>(".service-tab");
 const serviceCards = document.querySelectorAll<HTMLElement>(".service-card[data-service-card]");
@@ -162,11 +148,7 @@ serviceCards.forEach((card) => {
 
 
 
-/* =========================
-   HOVER -> TOQUE (MOBILE)
-   Ativa estados de :hover (service-card, projects-gallery img)
-   atraves de toque em telas sem mouse.
-========================= */
+
 
 (function enableTouchHover() {
 
@@ -204,15 +186,11 @@ serviceCards.forEach((card) => {
 
 })();
 
-/* =========================
-   TEAM MODAL
-========================= */
+
 
 const teamModal = document.querySelector<HTMLElement>("#teamModal");
 
 if (teamModal) {
-  // Move o modal para o body para evitar conflitos
-  // com transform, filter e overflow das seções.
   document.body.appendChild(teamModal);
 
   const teamModalImage =
@@ -247,7 +225,6 @@ if (teamModal) {
     let previousFocus: HTMLElement | null = null;
     let scrollPosition = 0;
 
-    // ABRIR MODAL
     function openTeamModal(button: HTMLButtonElement) {
       const image = button.querySelector<HTMLImageElement>("img");
 
@@ -264,10 +241,8 @@ if (teamModal) {
 
       const description = button.dataset.description || "";
 
-      // Mantém a descrição original, sem reorganizar o conteúdo.
       teamModalDescription.textContent = description;
 
-      // Apenas diminui a fonte quando o texto é longo.
       teamModal.classList.toggle(
         "is-long-description",
         description.length > 400
@@ -281,7 +256,6 @@ if (teamModal) {
       closeButton.focus({ preventScroll: true });
     }
 
-    // FECHAR MODAL
     function closeTeamModal() {
       teamModal.classList.remove("is-open");
       teamModal.classList.remove("is-long-description");
@@ -294,20 +268,16 @@ if (teamModal) {
       previousFocus?.focus({ preventScroll: true });
     }
 
-    // CLIQUE NAS FOTOS
     teamButtons.forEach((button) => {
       button.addEventListener("click", () => {
         openTeamModal(button);
       });
     });
 
-    // BOTÃO DE FECHAR
     closeButton.addEventListener("click", closeTeamModal);
 
-    // CLIQUE NO FUNDO ESCURO
     backdrop.addEventListener("click", closeTeamModal);
 
-    // FECHAR COM ESC
     document.addEventListener("keydown", (event) => {
       if (
         event.key === "Escape" &&

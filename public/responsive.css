@@ -1,17 +1,6 @@
-/* =========================
-   RESPONSIVIDADE — FUKUIFILM
-   Breakpoints:
-   - Mobile XS: <= 359px
-   - Mobile S:  360px – 479px
-   - Mobile L:  480px – 767px
-   - Tablet:    768px – 1023px
-   - Notebook:  1024px – 1279px
-   - Desktop:   >= 1280px (base em styles.css)
-========================= */
 
-/* =========================
-   UTILITÁRIOS GLOBAIS
-========================= */
+
+
 
 html,
 body {
@@ -47,11 +36,7 @@ video {
     }
 }
 
-/* =========================
-   TOQUE = HOVER (MOBILE)
-   Classe aplicada via JS (script.js / projetos.js) em
-   dispositivos sem mouse, reproduzindo os efeitos de :hover.
-========================= */
+
 
 @media (hover: none),
 (pointer: coarse) {
@@ -65,9 +50,7 @@ video {
     }
 }
 
-/* =========================
-   MENU — HAMBURGUER
-========================= */
+
 
 .menu-toggle {
     display: none;
@@ -92,20 +75,18 @@ video {
     background: rgba(255, 255, 255, 0.06);
 }
 
-/* Garante que o menu nunca suma — o menu e essencial em todos os tamanhos */
+
 .floating-menu {
     display: flex;
     max-width: calc(100% - 16px);
 }
 
-/* Estado hide ao rolar: usa transform, nao display */
+
 .floating-menu.hide {
     transform: translateX(-50%) translateY(-120%);
 }
 
-/* =========================
-   MENU — TABLET (768–1023px)
-========================= */
+
 
 @media (max-width: 1023px) {
 
@@ -150,7 +131,7 @@ video {
         letter-spacing: .04em;
     }
 
-    /* Instagram vermelho e alinhado com os links no menu mobile */
+
     #main-navigation li.nav-instagram {
         border-bottom: none;
         padding: 14px 4px;
@@ -164,7 +145,7 @@ video {
         box-shadow: none !important;
     }
 
-    /* Esconde o icone do Instagram da barra direita no mobile (ele passa a viver dentro do menu) */
+
     .menu-instagram {
         display: none;
     }
@@ -182,22 +163,20 @@ video {
     }
 }
 
-/* =========================
-   MENU — MOBILE (< 768px)
-========================= */
+
 
 @media (max-width: 767px) {
 
     #main-navigation {
         align-items: flex-end;
-        /* joga tudo pra direita */
+
     }
 
     #main-navigation li {
         width: 100%;
         display: flex;
         justify-content: flex-end;
-        /* conteúdo encosta na direita */
+
     }
 
     .floating-menu {
@@ -249,9 +228,7 @@ video {
     }
 }
 
-/* =========================
-   HERO / INTRO VIDEO
-========================= */
+
 
 .intro-video {
     position: relative;
@@ -261,7 +238,7 @@ video {
     overflow: hidden;
 }
 
-/* Garante margem dos dois lados — resolve o corte */
+
 .hero-overlay {
     position: absolute !important;
     bottom: 72px !important;
@@ -279,7 +256,7 @@ video {
     overflow: hidden;
 }
 
-/* Notebook */
+
 @media (max-width: 1279px) {
 
     .hero-overlay {
@@ -291,7 +268,7 @@ video {
     }
 }
 
-/* Tablet */
+
 @media (max-width: 1023px) {
 
     .hero-overlay {
@@ -306,7 +283,7 @@ video {
     }
 }
 
-/* Mobile (< 768px) — titulo quebra em ate 2 linhas, sem cortar palavras */
+
 @media (max-width: 767px) {
 
     .intro-video {
@@ -353,7 +330,7 @@ video {
     }
 }
 
-/* Mobile S (< 480px) */
+
 @media (max-width: 479px) {
 
     .hero-overlay {
@@ -370,7 +347,7 @@ video {
     }
 }
 
-/* Mobile XS (<= 359px) */
+
 @media (max-width: 359px) {
 
     .hero-overlay {
@@ -390,9 +367,7 @@ video {
     }
 }
 
-/* =========================
-   SOBRE
-========================= */
+
 
 @media (max-width: 1279px) {
 
@@ -538,9 +513,7 @@ video {
     }
 }
 
-/* =========================
-   PROJETOS (index)
-========================= */
+
 
 @media (max-width: 1279px) {
 
@@ -625,9 +598,7 @@ video {
     }
 }
 
-/* =========================
-   MÉTODO
-========================= */
+
 
 @media (max-width:1279px) {
 
@@ -819,9 +790,7 @@ video {
 
 }
 
-/* =========================
-   SERVICOS
-========================= */
+
 
 @media (max-width: 1279px) {
 
@@ -872,8 +841,7 @@ video {
         border-radius: 10px;
     }
 
-    /* Em telas de toque a legenda fica sempre visivel, ja que o hover
-       nao existe — o JS ainda pode alternar via toque para reforcar. */
+
     .service-overlay p {
         opacity: 1;
         transform: translateY(0);
@@ -931,9 +899,7 @@ video {
     }
 }
 
-/* =========================
-   FOOTER
-========================= */
+
 
 @media (max-width: 767px) {
 
@@ -943,9 +909,7 @@ video {
     }
 }
 
-/* =========================
-   PAGINA PROJETOS
-========================= */
+
 
 @media (max-width: 1279px) {
 
@@ -1169,9 +1133,7 @@ video {
     }
 }
 
-/* =========================
-   FILMES
-========================= */
+
 
 @media (max-width: 1279px) {
 
@@ -1382,7 +1344,7 @@ video {
 
 }
 
-/* Corrige os botões do slider de serviços */
+
 .services-controls {
     display: flex !important;
     justify-content: center;
@@ -1399,7 +1361,7 @@ video {
     flex: 0 0 auto;
 }
 
-/* Grade editorial da seção de serviços */
+
 @media (max-width: 1279px) {
     .services-section {
         padding: 50px 4% 64px;
@@ -1555,7 +1517,7 @@ video {
     }
 }
 
-/* Modal detalhado de projetos */
+
 @media (max-width: 767px) {
     .project-modal {
         padding: 0;
@@ -1749,7 +1711,7 @@ video {
 }
 
 
-/* SERVIÇOS — CARDS FIXOS, SEM IMAGENS FLUTUANDO */
+
 
 #servicos .services-grid {
     display: grid;
@@ -1771,7 +1733,7 @@ video {
     box-shadow: none;
 }
 
-/* A imagem permanece dentro do próprio card */
+
 #servicos .service-card img {
     display: block;
     width: 100%;
@@ -1781,7 +1743,7 @@ video {
     transform: none;
 }
 
-/* O clique não altera a posição nem o tamanho do card */
+
 #servicos.is-service-expanded .services-grid {
     position: relative;
     height: auto;
@@ -1799,7 +1761,7 @@ video {
     transition: none;
 }
 
-/* Textos adaptados ao espaço disponível */
+
 #servicos .service-overlay {
     box-sizing: border-box;
     padding: 16px 14px 22px;
@@ -1834,7 +1796,7 @@ video {
     overflow-wrap: anywhere;
 }
 
-/* Tablet */
+
 @media (max-width: 900px) {
     #servicos .services-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1847,7 +1809,7 @@ video {
     }
 }
 
-/* Celular */
+
 @media (max-width: 520px) {
     #servicos {
         padding-right: 5%;
@@ -1872,33 +1834,33 @@ video {
 }
 
 
-/* Remove os números dos cards e das abas de serviços */
+
 #servicos .service-label>span,
 #servicos .service-tab>span {
     display: none;
 }
 
 
-/* O QUE FAZEMOS — ajustes nas abas e legendas */
 
-/* Remove a linha vermelha abaixo da aba ativa */
+
+
 #servicos .service-tab.is-active::after {
     display: none;
 }
 
-/* Esconde os números das abas e dos cards */
+
 #servicos .service-tab>span,
 #servicos .service-label>span {
     display: none !important;
 }
 
-/* Mantém a legenda visível no card selecionado */
+
 #servicos .service-card.is-active .service-overlay p {
     opacity: 1;
     transform: translateY(0);
 }
 
-/* Mantém a descrição visível ao passar o mouse */
+
 #servicos .service-card:hover .service-overlay p {
     opacity: 1;
     transform: translateY(0);
@@ -1911,9 +1873,7 @@ video {
     }
 }
 
-/* =========================================
-   SOBRE — CARD RESPONSIVO COMPACTO
-========================================= */
+
 
 @media (max-width: 1279px) {
 
@@ -2022,9 +1982,7 @@ video {
     }
 }
 
-/* =========================================
-   EQUIPE — CARROSSEL MOBILE
-========================================= */
+
 
 @media (max-width: 767px) {
     .team-grid {
