@@ -157,7 +157,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
           <button class="project-card" data-project="11">
             <span class="project-name">La Cocina Mescla | Encontro de grandes nomes da gastronomia</span>
-            <img src="img/coccina.webp" alt="Projeto 9" loading="lazy">
+            <img src="img/otimizadas/coccina/550A1311.webp" alt="La Cocina Mescla" loading="lazy">
           </button>
 
           <button class="project-card" data-project="12">
@@ -202,7 +202,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           <img src="img/cadafalsohorizontal.webp" alt="Cadafalso" loading="lazy">
 
           <button class="film-btn" data-film="cadafalso">
-            SOBRE O FILME
+            <span>SOBRE O FILME</span>
           </button>
 
         </div>
@@ -212,7 +212,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           <img src="img/etrehorizontal.webp" alt="ÊTRE" class="etre-img" loading="lazy">
 
           <button class="film-btn" data-film="etre">
-            SOBRE O FILME
+            <span>SOBRE O FILME</span>
           </button>
 
         </div>
@@ -310,6 +310,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
           <div id="modal-gallery" class="modal-gallery">
           </div>
+          <button id="modal-gallery-more" class="modal-gallery-more" type="button" style="display: none;">Ver mais</button>
 
         </section>
 
@@ -341,6 +342,16 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           <a class="budget-btn" href="https://wa.me/5547999988082" target="_blank" rel="noopener noreferrer">Solicitar orçamento <i class="fa-solid fa-arrow-right"></i></a>
         </div>
 
+      </div>
+
+      <div id="project-image-viewer" class="project-image-viewer" role="dialog" aria-modal="true" aria-label="Visualizador de imagens" aria-hidden="true">
+        <button class="project-image-viewer-close" type="button" aria-label="Fechar imagem"><i class="fa-solid fa-xmark"></i></button>
+        <button class="project-image-viewer-nav project-image-viewer-prev" type="button" aria-label="Imagem anterior"><i class="fa-solid fa-chevron-left"></i></button>
+        <figure class="project-image-viewer-figure">
+          <img class="project-image-viewer-image" src="" alt="">
+          <figcaption class="project-image-viewer-count"></figcaption>
+        </figure>
+        <button class="project-image-viewer-nav project-image-viewer-next" type="button" aria-label="Próxima imagem"><i class="fa-solid fa-chevron-right"></i></button>
       </div>
 
     </div>

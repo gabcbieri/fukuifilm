@@ -46,7 +46,7 @@ export const projectGalleryItems = [
     },
     {
         title: "La Cocina Mescla | Encontro de grandes nomes da gastronomia",
-        image: "img/coccina.webp",
+        image: "img/otimizadas/coccina/550A1311.webp",
     },
     {
         title: "Camvel Porto Belo | Vídeo Promocional",

@@ -1,5 +1,7 @@
 *.mp4
+*.MP4
 *.mov
+*.MOV
 *.zip
 hs_err_pid*.log
 replay_pid*.log
@@ -7,3 +9,20 @@ node_modules/
 
 dist/
 .astro/
+.media-originals/
+
+# Publicar somente vídeos otimizados
+!public/videos/otimizados/
+!public/videos/otimizados/*.mp4
+!public/videos/otimizados/*.MP4
+!public/videos/otimizados/coccina/
+!public/videos/otimizados/coccina/*.mp4
+!public/videos/otimizados/philozon/
+!public/videos/otimizados/philozon/*.mp4
+
+!public/videos/otimizados/camvel/
+!public/videos/otimizados/camvel/*.mp4
+
+# Fotografias originais mantidas localmente
+public/img/coccina/*.jpg
+public/img/inticafe/*.jpg
