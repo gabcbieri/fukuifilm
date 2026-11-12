@@ -1,7 +1,3 @@
-
-
-
-
 html,
 body {
     max-width: 100%;
@@ -2025,4 +2021,201 @@ video {
 .method-slide {
     border-radius: 16px;
     overflow: hidden;
+}
+
+
+/* Compactação da equipe FUKUIFILM */
+
+@media (min-width: 768px) {
+    .about-section .about-team {
+        min-height: 100svh;
+        box-sizing: border-box;
+        padding: 25px 5.5% 15px;
+    }
+
+    .about-section .team-header {
+        margin-bottom: 18px;
+    }
+
+    .about-section .team-header h2 {
+        font-size: clamp(48px, 5.5vw, 72px);
+        line-height: .9;
+    }
+
+    .about-section .team-header>p {
+        max-width: 300px;
+        font-size: 11px;
+        line-height: 1.55;
+        margin-bottom: 4px;
+    }
+
+    .about-section .team-grid {
+        gap: 14px;
+    }
+
+    .about-section .team-photo-button {
+        height: clamp(325px, 42vh, 430px);
+    }
+
+    .about-section .team-info {
+        padding: 14px 16px 16px;
+    }
+
+    .about-section .team-role {
+        font-size: 8px;
+        margin-bottom: 5px;
+    }
+
+    .about-section .team-info h3 {
+        font-size: clamp(17px, 1.5vw, 21px);
+        margin: 6px 0;
+    }
+
+    .about-section .team-info p {
+        font-size: 11px;
+        line-height: 1.45;
+    }
+
+    .about-section .team-more-button {
+        margin-top: 12px;
+        margin-bottom: 0;
+        font-size: 9px;
+    }
+
+    .team-scroll-hint {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .about-section .about-team {
+        padding: 65px 20px 45px;
+    }
+
+    .about-section .team-header {
+        gap: 14px;
+        margin-bottom: 20px;
+    }
+
+    .about-section .team-header h2 {
+        font-size: 52px;
+    }
+
+    .about-section .team-header>p {
+        font-size: 11px;
+        line-height: 1.5;
+    }
+
+    .team-scroll-hint {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 9px;
+        margin: 0 0 12px;
+        color: #ed1017;
+        font-size: 9px;
+        font-weight: 600;
+        letter-spacing: 1.3px;
+    }
+
+    .team-scroll-hint svg {
+        width: 19px;
+        height: 19px;
+        flex-shrink: 0;
+    }
+
+    .about-section .team-grid {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 12px;
+        width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding-bottom: 8px;
+        scroll-snap-type: x mandatory;
+        scroll-padding-left: 0;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    .about-section .team-grid::-webkit-scrollbar {
+        display: none;
+    }
+
+    .about-section .team-card {
+        flex: 0 0 86%;
+        width: 86%;
+        min-width: 86%;
+        scroll-snap-align: start;
+    }
+
+    .about-section .team-photo-button {
+        height: 230px;
+    }
+
+    .about-section .team-info {
+        padding: 14px 15px 16px;
+    }
+
+    .about-section .team-info h3 {
+        font-size: 20px;
+        margin: 7px 0;
+    }
+
+    .about-section .team-info p {
+        font-size: 11px;
+        line-height: 1.5;
+    }
+
+    .about-section .team-more-button {
+        margin-top: 12px;
+        margin-bottom: 0;
+    }
+}
+
+.about-section .team-photo-button img {
+    object-position: center 18%;
+}
+
+@media (max-width: 767px) {
+    .team-modal-image {
+        height: 350px;
+        min-height: 350px;
+    }
+
+    .team-modal-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 20%;
+    }
+}
+
+@media (max-width: 767px) {
+    .team-modal-info {
+        padding-top: 50px;
+    }
+}
+
+@media (max-width: 767px) {
+    .team-scroll-hint {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .team-scroll-hint > svg {
+        display: block;
+        width: 19px;
+        height: 19px;
+        min-width: 19px;
+        max-width: 19px;
+        flex: 0 0 19px;
+        overflow: hidden;
+    }
+
+    .team-scroll-hint > svg path {
+        stroke-width: 1.6;
+    }
 }

@@ -17,10 +17,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
       <ul id="main-navigation">
         <li><a href="#">Início</a></li>
-        <li><a href="#sobre">Sobre</a></li>
         <li><a href="#projetos">Projetos</a></li>
         <li><a href="#metodo">Método</a></li>
         <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#sobre">Sobre</a></li>
         <li class="nav-instagram">
           <a href="https://www.instagram.com/fukuifilm/" target="_blank" rel="noopener noreferrer">
             <i class="fab fa-instagram"></i>
@@ -410,6 +410,24 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         </div>
 
 
+        <p class="team-scroll-hint">
+    <span>ARRASTE PARA O LADO</span>
+    <svg
+        width="19"
+        height="19"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.6"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+        style="width: 19px !important; height: 19px !important; min-width: 19px; max-width: 19px; display: block !important; position: static !important; transform: none !important; flex: 0 0 19px !important;"
+    >
+        <path d="M4 12h16M13 5l7 7-7 7"></path>
+    </svg>
+</p>
+
         <div class="team-grid">
 
 
@@ -420,14 +438,13 @@ import BaseLayout from "../layouts/BaseLayout.astro";
               type="button"
               data-name="Yohana Fukui"
               data-role="DIRETORA CRIATIVA"
-              data-description="Na FUKUI FILM, sou diretora criativa e trabalho com audiovisual. Crio filmes, campanhas publicitárias, videoclipes e conteúdos para marcas e empresas de diferentes áreas.&#10;
-              Sou curiosa e observadora. Gosto de ouvir as pessoas, perceber os detalhes e entender o que torna cada história especial. Levo esse olhar para os projetos que dirijo, transformando ideias em imagens que despertam sentimentos, criam conexões e ficam na memória.&#10;
-              Acredito que uma imagem pode ir além de mostrar. Ela pode revelar verdades, tocar alguém e mudar a forma como olhamos para uma história. É essa possibilidade que torna cada produção tão significativa para mim.&#10;
+              data-description="Sou diretora criativa e trabalho com audiovisual. Dirijo filmes, campanhas publicitárias, videoclipes e conteúdos para marcas e empresas de diferentes segmentos.Gosto de ouvir as pessoas, perceber os detalhes e descobrir o que torna cada história única. Em cada projeto, busco transformar ideias em imagens que despertam sentimentos, criam conexões e ficam na memória.&#10
+              Acredito que uma imagem pode ir além de mostrar, pode revelar, emocionar e transformar a forma como enxergamos uma história. É essa possibilidade que torna cada produção tão significativa para mim.&#10;
               Instagram: @fleurnuitt"
             >
 
               <img
-                src="img/yohana.webp"
+                src="img/otimizadas/yohana.webp"
                 alt="Yohana Fukui"
                 loading="lazy"
               >
@@ -476,7 +493,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
             >
 
               <img
-                src="img/mariana.webp"
+                src="img/otimizadas/mariana.webp"
                 alt="Integrante da equipe FUKUIFILM"
                 loading="lazy"
               >
@@ -524,7 +541,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
             >
 
               <img
-                src="img/lucas.webp"
+                src="img/otimizadas/lucas.webp"
                 alt="Integrante da equipe FUKUIFILM"
                 loading="lazy"
               >
@@ -609,22 +626,36 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     </section>
 
     <div class="about-slogan">
+  <p class="slogan-japanese">
+    アーティストの義務は見たすべての真実を描写することです<span class="slogan-red-dot">。</span>
+  </p>
 
-      <p class="slogan-japanese">
-        アーティストの義務は見たすべての真実を描写することです。
-      </p>
-
-      <p class="slogan-translation">
-        É dever do artista retratar toda a verdade que vê.
-      </p>
-
-    </div>
+  <p class="slogan-translation">
+    É dever do artista retratar toda a verdade que vê.
+  </p>
+</div>
 
   </main>
 
   <footer class="site-footer">
-    <p>© 2026 FUKUIFILM. Todos os direitos reservados.</p>
-  </footer>
+  <p>© 2026 FUKUIFILM. Todos os direitos reservados.</p>
+
+  <p class="footer-credit">
+    Projeto desenvolvido por&nbsp;<a href="https://gabcbieri.vercel.app/" target="_blank" rel="noopener noreferrer">Gabriella Barbieri
+      <svg
+        class="diagonal-arrow-icon footer-credit-arrow"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.8"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true">
+        <path d="M7 17 17 7M7 7h10v10"/>
+      </svg>
+    </a>
+  </p>
+</footer>
 
 </BaseLayout>
 

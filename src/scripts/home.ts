@@ -1,7 +1,28 @@
 // @ts-nocheck
 
+let pageScrollY = 0;
+let pageScrollLocked = false;
 
+function lockPageScroll() {
+  if (pageScrollLocked) return;
 
+  pageScrollY = window.scrollY;
+  pageScrollLocked = true;
+
+  document.body.classList.add("page-scroll-locked");
+  document.body.style.top = `-${pageScrollY}px`;
+}
+
+function unlockPageScroll() {
+  if (!pageScrollLocked) return;
+
+  pageScrollLocked = false;
+
+  document.body.classList.remove("page-scroll-locked");
+  document.body.style.top = "";
+
+  window.scrollTo(0, pageScrollY);
+}
 
 const nav       = document.getElementById("main-navigation");
 const toggleBtn = document.querySelector(".menu-toggle");
@@ -231,7 +252,6 @@ if (teamModal) {
       if (!image) return;
 
       previousFocus = button;
-      scrollPosition = window.scrollY;
 
       teamModalImage.src = image.src;
       teamModalImage.alt = image.alt;
@@ -251,7 +271,7 @@ if (teamModal) {
       teamModal.classList.add("is-open");
       teamModal.setAttribute("aria-hidden", "false");
 
-      document.body.style.overflow = "hidden";
+      lockPageScroll();
 
       closeButton.focus({ preventScroll: true });
     }
@@ -261,9 +281,7 @@ if (teamModal) {
       teamModal.classList.remove("is-long-description");
       teamModal.setAttribute("aria-hidden", "true");
 
-      document.body.style.overflow = "";
-
-      window.scrollTo(0, scrollPosition);
+      unlockPageScroll();
 
       previousFocus?.focus({ preventScroll: true });
     }
