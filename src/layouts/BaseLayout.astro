@@ -19,9 +19,20 @@ const { title, description } = Astro.props;
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#0b0b0b" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="FUKUIFILM" />
+    <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="FUKUIFILM" />
+    <meta property="og:url" content="https://fukuifilm.com.br/" />
+    <meta property="og:image" content="https://fukuifilm.com.br/img/og-image.png" />
+    <meta property="og:image:secure_url" content="https://fukuifilm.com.br/img/og-image.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="https://fukuifilm.com.br/img/og-image.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Oswald:wght@400&display=swap" rel="stylesheet" />
@@ -30,7 +41,7 @@ const { title, description } = Astro.props;
     <link rel="stylesheet" href="/responsive.css" />
     <link rel="stylesheet" href="/method-editorial.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-    <link rel="icon" href="/img/ico.ico" />
+    <link rel="icon" type="image/x-icon" href="/img/ico.ico" />
   </head>
   <body>
     <slot />

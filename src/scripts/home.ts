@@ -1,3 +1,4 @@
+
 // @ts-nocheck
 
 let pageScrollY = 0;
@@ -9,8 +10,11 @@ function lockPageScroll() {
   pageScrollY = window.scrollY;
   pageScrollLocked = true;
 
-  document.body.classList.add("page-scroll-locked");
+  document.body.style.position = "fixed";
   document.body.style.top = `-${pageScrollY}px`;
+  document.body.style.left = "0";
+  document.body.style.right = "0";
+  document.body.style.width = "100%";
 }
 
 function unlockPageScroll() {
@@ -18,10 +22,17 @@ function unlockPageScroll() {
 
   pageScrollLocked = false;
 
-  document.body.classList.remove("page-scroll-locked");
+  document.body.style.position = "";
   document.body.style.top = "";
+  document.body.style.left = "";
+  document.body.style.right = "";
+  document.body.style.width = "";
 
-  window.scrollTo(0, pageScrollY);
+  window.scrollTo({
+    top: pageScrollY,
+    left: 0,
+    behavior: "instant"
+  });
 }
 
 const nav       = document.getElementById("main-navigation");
