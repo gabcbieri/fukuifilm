@@ -317,3 +317,28 @@ if (teamModal) {
     });
   }
 }
+
+const heroVideo = document.querySelector<HTMLVideoElement>(
+  ".intro-video video"
+);
+
+if (heroVideo && window.matchMedia("(max-width: 767px)").matches) {
+  heroVideo.muted = true;
+  heroVideo.defaultMuted = true;
+  heroVideo.playsInline = true;
+  heroVideo.autoplay = true;
+
+  const startVideo = () => {
+    if (heroVideo.paused) {
+      heroVideo.play().catch((error) => {
+        console.warn("Não foi possível iniciar o vídeo automaticamente:", error);
+      });
+    }
+  };
+
+  if (heroVideo.readyState >= 2) {
+    startVideo();
+  } else {
+    heroVideo.addEventListener("canplay", startVideo, { once: true });
+  }
+}
